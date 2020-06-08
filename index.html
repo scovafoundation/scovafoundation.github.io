@@ -17,12 +17,12 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/epubjs/dist/epub.min.js"></script>
     <script>
-        var book = ePub("../SCOVA_preface_double.epub", {})
-        var rendition = book.renderTo("area")
-        rendition.display()
+        var book = ePub("https://s3.amazonaws.com/moby-dick/");
+        var rendition = book.renderTo("area");
+        rendition.display();
     </script>
 </body>
 
-<div id="area" style="height: 500px;"></div>
+<div id="area"></div>
 
 </html>
