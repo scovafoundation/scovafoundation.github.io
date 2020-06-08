@@ -1,6 +1,26 @@
-<script src="https://cdn.jsdelivr.net/npm/epubjs/dist/epub.min.js"></script>
-<script>
-    var book = ePub("https://github.com/scovafoundation/scovafoundation.github.io/blob/master/SCOVA_preface_single.epub?raw=true");
-    var rendition = book.renderTo("area");
-    rendition.display();
-</script>
+<!doctype html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Scova</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/epubjs/dist/epub.min.js"></script>
+    <script>
+        var book = ePub("https://github.com/scovafoundation/scovafoundation.github.io/blob/master/SCOVA_preface_single.epub?raw=true");
+        var rendition = book.renderTo("area");
+        rendition.display();
+    </script>
+</body>
+
+</html>
