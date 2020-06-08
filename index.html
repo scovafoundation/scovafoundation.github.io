@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Scova</title>
+    <title>Scova, The Book</title>
     <meta name="description" content="Scova, The Book">
     <meta name="author" content="Anhad Singh Arora">
 
@@ -17,12 +17,12 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/epubjs/dist/epub.min.js"></script>
     <script>
-        var book = ePub("../SCOVA_preface_double.epub");
-        var rendition = book.renderTo("area");
-        rendition.display();
+        var book = ePub("../SCOVA_preface_double.epub", {})
+        var rendition = book.renderTo("area")
+        rendition.display()
     </script>
 </body>
 
-<div id="area"></div>
+<div id="area" style="height: 500px;"></div>
 
 </html>
