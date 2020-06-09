@@ -17,12 +17,12 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/epubjs/dist/epub.min.js"></script>
     <script>
-        var book = ePub("https://s3.amazonaws.com/moby-dick/");
+        var book = ePub("http://www.gutenberg.org/ebooks/10.epub");
         var rendition = book.renderTo("area");
         rendition.display();
     </script>
 </body>
 
-<div id="area"></div>
+<div id="area" style="height: 900px;"></div>
 
 </html>
