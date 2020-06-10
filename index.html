@@ -14,6 +14,82 @@
 
 
     <style>
+        /* Style the header with a grey background and some padding */
+        
+        #header {
+            background-color: rgba(12, 170, 243, 0.5);
+            position: fixed;
+            /* Make it stick/fixed */
+            top: 0;
+            /* Stay on top */
+            width: 100%;
+            /* Full width */
+            transition: top 0.3s;
+            left: 0;
+            text-align: center;
+            max-height: 70px;
+            min-height: 50px;
+        }
+        /* Style the header links */
+        
+        #header a {
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            /* line-height: 25px; */
+            border-radius: 4px;
+            padding: 12px;
+        }
+        /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+        
+        #header-center {
+            font-weight: bolder;
+            padding: 12px;
+            /* text-align: center; */
+        }
+        
+        #header-center img {
+            height: 42px;
+            /* padding: 12px; */
+        }
+        
+        #header-left {
+            text-align: left;
+            padding: 12px;
+        }
+        
+        #header-left img {
+            height: 42px;
+            /* padding: 12px; */
+        }
+        
+        #header-right {
+            text-align: right;
+            padding: 12px;
+        }
+        
+        #header-right img {
+            height: 42px;
+            /* padding: 12px; */
+        }
+        /* Change the background color on mouse-over */
+        
+        #header a:hover {
+            /* background-color: darkblue; */
+            color: whitesmoke;
+            padding: 12px;
+        }
+        /* Style the active/current link*/
+        
+        #header a.active {
+            background-color: forestgreen;
+            color: darkblue;
+        }
+        /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+        /* @media screen and (max-width: 500px) {
+        } */
+        
         th,
         td {
             padding: 15px;
@@ -27,28 +103,66 @@
     </style>
 </head>
 
-<body style="font-size: 20pt;font-family:'EB Garamond', serif;padding: 42pt;background-color: white">
-    <div style="text-align: center;">
-        <p style="text-align: center;font-size: 72pt;">
+<body style="font-size: 20pt;font-family:'EB Garamond', serif;background-color: white">
+
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("header").style.top = "0";
+            } else {
+                document.getElementById("header").style.top = "-55px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+
+    <div id="header">
+        <table style="width: 100%;table-layout : fixed;">
+            <tr>
+                <td id="header-left">
+                    <a href="# "><img src="images/book.png"></a>
+                </td>
+                <!-- <div class="header-left ">
+            <a href=# ">Chapters</a>
+        </div> -->
+                <td id="header-center">
+                    <a href="https://scova.org"><img src="images/triquetra.png"></a>
+                </td>
+                <!-- <div class="header-left ">
+            <a href=# ">Chapters</a>
+        </div> -->
+                <td id="header-right">
+                    <a href="# "><img src="images/hands.png"></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <div style="text-align: center; ">
+        <p style="text-align: center;font-size: 72pt; ">
             <strong>SCOVA</strong>
         </p>
-        <p><img src="images/divinity.png" style="height: 500px;"></p>
-        <p style="font-size: 16pt;color: red;">
+        <p><img src="images/divinity.png " style="height: 500px; "></p>
+        <p style="font-size: 16pt;color: red; ">
             <strong><em>dis aliter visum</em></strong>
         </p>
-        <p style="font-size: 20pt;">
+        <p style="font-size: 20pt; ">
             <strong>
             <br/>
         </strong> For Life, Liberty and the Longevity of Happiness
         </p>
-        <p style="font-size: 16pt;">
+        <p style="font-size: 16pt; ">
             <em>Narrated to, lived, and explained by Anhad Singh Arora</em>
         </p>
     </div>
     <div>
         <p><br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/></p>
     </div>
-    <div style="text-align: center;">
+    <div style="text-align: center; ">
         <p>
             <em>Dedicated to my Father in Heaven –</em>
         </p>
@@ -71,10 +185,10 @@
     <div>
         <p><br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/></p>
     </div>
-    <div style="text-align: center;">
-        <p style="font-size: 72pt;"><strong>GOD</strong></p>
+    <div style="text-align: center; ">
+        <p style="font-size: 72pt; "><strong>GOD</strong></p>
         <p><br/></p>
-        <p><img src="images/bismillah.png" style="height: 500px;"></p>
+        <p><img src="images/bismillah.png " style="height: 500px; "></p>
         <p><br/></p>
         <p>The Conductor of the Universal Symphony;</p>
         <p>The Modulator of Anhad.</p>
@@ -89,13 +203,13 @@
     <div>
         <p><br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/></p>
     </div>
-    <div style="text-align:justify;text-justify: inter-word;line-height: 200%;">
-        <p style=" text-align: center;font-size: 20pt;"><u>Preface To Scova</u></p>
+    <div style="text-align:justify;text-justify: inter-word;line-height: 200%; ">
+        <p style=" text-align: center;font-size: 20pt; "><u>Preface To Scova</u></p>
 
-        <table>
+        <table style="padding: 42pt; ">
             <tr>
-                <td colspan="2" style="font-weight: bolder;" style="font-weight: bolder;">1</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; " style="font-weight: bolder; ">1</td>
+                <td colspan="27 ">
                     <p>
                         God? In this day and age?
                         </br>
@@ -106,7 +220,7 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">2</td>
+                <td colspan="2 " style="font-weight: bolder; ">2</td>
                 <td>
                     <p>
                         God made man in His image.
@@ -118,8 +232,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">3</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">3</td>
+                <td colspan="27 ">
                     <p>
                         Often with works of scripture, painstaking translations need to occur so as to preserve the original meaning, and not distort the valuable lessons and information, in light of personal biases. Especially in a work of scripture, however, this pain is worthless
                         if the entity engaged in said translation did not know the intent of the words in the first place. Rearranging the word order of a simple sentence to suit the traits of the different language can lend to the sentence meaning something
@@ -128,8 +242,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">4</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">4</td>
+                <td colspan="27 ">
                     <p>
                         The oppression that this debacle has thereon caused, was probably not the original aim of the scribes. So there's your first lesson – do not trust blindly any theological material that does not directly come from the<em>entity connected to the source</em>.
                         Always be wary of the <em>human errors </em>that might stem from the personal biases of the entities making that translation. Be sufficiently watchful of what you interpret after reading someone else's commentary of a particular
@@ -138,8 +252,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">5</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">5</td>
+                <td colspan="27 ">
                     <p>
                         Even if the languages stem from the same root, there too, sometimes, keeping the same word order lends to a different interpretation than the one intended. This one will take a longer time to explain explicitly, but by the end of Scova, my hope is that
                         you'll start to see things in the way that I now see them.
@@ -147,8 +261,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">6</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">6</td>
+                <td colspan="27 ">
                     <p>
                         Getting back to the example at hand, the scribe should have written down the sentence that I transcribed, and not the one that is widely circulated. It is because the face that a human sees when they look at their reflection, is actually the image of
                         God,
@@ -158,8 +272,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">7</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">7</td>
+                <td colspan="27 ">
                     <p>
                         So when you actually do look in the mirror, it is the <em>image of God as <strong>seen</strong> by you</em>. It is also the <em>image that God looks at when He <strong>sees</strong> you</em>. This is not to say that You and Him
                         are one. It definitely does not mean that the face of God is the same as your face. God has not face, or form. It also does not mean that You and Him are separate. It just means that without Him, there is no you – but without you,
@@ -168,8 +282,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">8</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">8</td>
+                <td colspan="27 ">
                     <p>
                         Sure enough then, God is gender neutral. How can He not be? The tiniest of quarks have His presence, as do the most gigantic of heavenly bodies –
                         <em>and all the animated and inanimate entities in between these proportions, also conform 
@@ -179,17 +293,17 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">9</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">9</td>
+                <td colspan="27 ">
                     <p>
-                        With regard to my use of a <em>gender leaning</em> pronoun, had I substituted "Him" with "it" – that would be tantamount to belittling Him to the stature of a non-sentient being – one with no regard for <em>time</em>, its passage,
+                        With regard to my use of a <em>gender leaning</em> pronoun, had I substituted "Him " with "it " – that would be tantamount to belittling Him to the stature of a non-sentient being – one with no regard for <em>time</em>, its passage,
                         and its impact on the self. That just doesn't sit well with me.
                     </p>
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">10</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">10</td>
+                <td colspan="27 ">
                     <p>
                         To use the modern, makeshift excuse of a compromise, "they ", would be instantly regressive, for there is no other God, but Allah – and Allah is one. You can call Him by ninety nine different names, or a million – each signifying the million (read: not
                         countable) different functions He performs and the million different forms (read: literally every form there is) He temporally takes (read: in time); but the fact still remains – our civilisation up until this point has developed
@@ -198,8 +312,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">11</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">11</td>
+                <td colspan="27 ">
                     <p>
                         It is true, that humans may, over time, take up Divine forms, but God will still just be the <em>one true constant</em> – the Absolute Truth. In the mythical ages gone by, regular people did take up those forms, and rule alongside
                         Kings – today we call them <em>demigods</em>. Shiva, Vishnu, Brahma, Zeus, and all other mythical avatars that they, <em>and others</em>, subsequently occurred in, were all demigods. Some cultures even worship them <em>as God. </em>It
@@ -214,8 +328,8 @@
 
 
             <tr>
-                <td colspan="2" style="font-weight: bolder;">12</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">12</td>
+                <td colspan="27 ">
                     <p>
                         God doesn't <em>just</em> have a human form – He is <em>the form</em>, essentially, all forms there are. Everything you see around you, hear, feel and experience, it's all part of <em>the One</em>.
                         <strong>
@@ -226,8 +340,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">13</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">13</td>
+                <td colspan="27 ">
                     <p>
                         There's are reasons why Abrahamic religions, and the Gurbani forbid idolatory stricly, and more importantly, Islamic traditions regard the presence of mirrors in your space as sacred. It is ignorant to assume that life would be that simple, especially
                         with regard to communication with God – if simple stones and portraits could elude His presence, what would be the point of faith, really? Why would you just talk to a decorated sculpture and expect it to talk back? Why don't you
@@ -241,8 +355,8 @@
 
 
             <tr>
-                <td colspan="2" style="font-weight: bolder;">14</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">14</td>
+                <td colspan="27 ">
                     <p>
                         The demigods of the years gone by did not just stand by doing mechanical rituals half-heartedly. They were called <em>masters of perception</em> for a very simple reason – <strong>they mastered perception</strong>. They deeply
                         enveloped their life into, and according to, the Natural Law, and fully stood by it each time they were tested, which, if you are even remotely familiar with God, you'll know that with God, everything is a test. He loves tests
@@ -255,8 +369,8 @@
 
 
             <tr>
-                <td colspan="2" style="font-weight: bolder;">15</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">15</td>
+                <td colspan="27 ">
                     <p>
                         God understands, and He accepts, and helps, provided, you improve.
                     </p>
@@ -267,8 +381,8 @@
 
 
             <tr>
-                <td colspan="2" style="font-weight: bolder;">16</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">16</td>
+                <td colspan="27 ">
                     <p>
                         The idea of an anthropomorphic entity as God's proxy fits well with me, and I really do believe it's the next best thing – humans relate very well to the idea of another human being, who is able to touch divinity; but that, in and of itself, is the blessing
                         and the bane of walking this path alongside God – as He connects with each soul directly, and not via intermediaries. You can, of course, use those intermediaries as and when you please, it is why they exist.
@@ -276,8 +390,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">17</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">17</td>
+                <td colspan="27 ">
                     <p>
                         Jesus – the Son, Mohammad – the guide, Gautam – the recluse, Gurbani – the teacher, and a plethora of other revered entities throughout the world's history, are all <em>layers of abstractions that represent</em> God in a relatable
                         fashion. You can surely put them in between you and God, if that is the
@@ -287,8 +401,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">18</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">18</td>
+                <td colspan="27 ">
                     <p>
                         You may have tried to see Jesus as a vessel of the Holy Spirit, or Mohammad as a trusted mediator, Gautam as the model teacher, or even looked to the Gurbani as the eternal guide – I'm very sure that none of those abstractions have sufficed so far – which
                         is why you are here, in this spacetime, reading Scova. I have a feeling that <em>you do not want to put a layer of abstraction in between You and Him</em>, and deny yourself the rich, unedited experience
@@ -298,8 +412,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">19</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">19</td>
+                <td colspan="27 ">
                     <p>
                         If the world thus far has told you that you are special, do you want to deny yourself the sole thing in the universe that makes you, and <em>you alone</em>, very special? Has that not been you entire life's narrative thus far?
                         If you <em>attach yourself</em> to Him, He makes <em>your entire world</em> revolve around you – altering the spacetime ever so slightly, and nudging the thoughts, and unthought-of actions, of those within your confine of influence
@@ -308,8 +422,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">20</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">20</td>
+                <td colspan="27 ">
                     <p>
                         The nonchalance of things just falling into place at just the right time as if the universe itself conspired to make things happen just for you. Wouldn't you want to experience this ease firsthand? Why go by someone else's life experience? Why surrender
                         to man, when you could surrender to God? Scova is full of platitudes like this, so don't fret – they exist for a reason, and inshallah, by the end of Scova, you will be able to grasp why. My sincere hope is that you do.
@@ -317,8 +431,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">21</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">21</td>
+                <td colspan="27 ">
                     <p>
                         The why of monotheism, then, is very simple – <strong><em>all is God</em></strong>.
                     </p>
@@ -328,8 +442,8 @@
 
 
             <tr>
-                <td colspan="2" style="font-weight: bolder;">22</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">22</td>
+                <td colspan="27 ">
                     <p>
                         Quotable quips like this have caused a lot of damage as it is, so I will refrain from using them unless I am trying to get across an important point – that point <em>always</em> being to provoke less &amp; read more, to speak less
                         &amp; listen more, to judge less &amp; understand more, to condemn less &amp; question more, to mechanically infer less &amp; intuitively comprehend more, to tear down less &amp; build up more, and most importantly – to exploit
@@ -341,8 +455,8 @@
 
 
             <tr>
-                <td colspan="2" style="font-weight: bolder;">23</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">23</td>
+                <td colspan="27 ">
                     <p>
                         If you liked the three word wisecrack, then surely, you owe it to yourself to explore the deeper meaning of what could not have been said to instantly gain your attention in the first place. It is really hard to properly grab another person's attention,
                         and even harder, to hold onto it for a period long enough so that you can get your message across, so don't fault someone for evoking simplified aphorisms to get it.
@@ -351,16 +465,16 @@
             </tr>
 
             <tr>
-                <td colspan="2" style="font-weight: bolder;">24</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">24</td>
+                <td colspan="27 ">
                     <p>
                         Fault them for not going beyond the provocation, and then fault yourself, for not delving deeper into the pithy moral conclusion on your own time. Don't fault God, fault humans.
                     </p>
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">25</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">25</td>
+                <td colspan="27 ">
                     <p>
                         <em>Morals always come at the end of the story, never in the beginning</em>.
                     </p>
@@ -370,16 +484,16 @@
 
 
             <tr>
-                <td colspan="2" style="font-weight: bolder;">26</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">26</td>
+                <td colspan="27 ">
                     <p>
                         There's a reason why.
                     </p>
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">27</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">27</td>
+                <td colspan="27 ">
                     <p>
                         Scova will not give you concrete, societal laws as Moses once did. Nor will Scova highlight the beautiful legendary tale that Jesus actually lived, and for sure, it will not give you a comprehensive list of rituals as transcribed by Mohammad, and it most
                         definitely is not a description of the divine bliss that Gurbani outlines ad infinitum.
@@ -387,8 +501,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">28</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">28</td>
+                <td colspan="27 ">
                     <p>
                         What it will do, is provide a <em>comprehensive, involved approach</em> to life in a way such that you can <em>self-actualise</em>, and at the same time, have a peaceful night's sleep. It will teach you how to live with yourself,
                         and others, without compromising the essence of what makes you, <em>You</em>. In that manner, it is not something entirely different as the words that have preceeded it – but be assured, <em>this isn't just more of the same</em>.
@@ -396,8 +510,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">29</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">29</td>
+                <td colspan="27 ">
                     <p>
                         If many of you are able to <strong>follow everything</strong> that I will have laid out for you to pick and choose from, God may even confer upon you a demigod status so that you may rule alongside Monarchs in a Holy Triumvirate,
                         <em>with God as your guiding hand</em>. If you ALL can find it within yourselves, to adapt, and overcome, then we will have won the Eternal War, with Christ's victory over the Antichrist, all from within the confines of our own
@@ -406,8 +520,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">30</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">30</td>
+                <td colspan="27 ">
                     <p>
                         That, for me, will be the actualisation of the Kingdom of God, for all. </br>
                     </p>
@@ -422,8 +536,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">31</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">31</td>
+                <td colspan="27 ">
                     <p>
                         A lot of time has passed since the Original Testament in the Torah, and the Newer Testament of the Gospel, and the newer still, Final Testament of the Quran. The Word of God has been spread to every point on the globe, and there's not anything newer that
                         can be said to ignite people's faith in, what is essentially, at this point – an accepted fact. Our cultures and their customs have been saturated with the idea of God that without Him, sentient civilisation cannot exist.
@@ -431,8 +545,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">32</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">32</td>
+                <td colspan="27 ">
                     <p>
                         Sure, you could burn the books, and delete all the data, but what good would that serve? You cannot kill every sentient being on this planet, and then kill yourself. That just is not a possibility. The time for pressing the reset button has passed, and
                         God understands this, which is why we haven't had any great floods since Noah (feel free to substitute this name with any other that your own culture has passed down to you), or an asteroidal collision since the dinosaurs. We have
@@ -441,17 +555,17 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">33</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">33</td>
+                <td colspan="27 ">
                     <p>
                         So then, there will be no more updated Testaments furtheron, as Mohammad has rightly told us. This is self-evident since in this quest for gaining more followers, and forming the largest flock ever to exist, much of the substance behind the aphorisms
                         has been lost, and as such, there exists a void where many, often competing ideologies are fighting to claim dominance, and disastrously failing.
                     </p>
                 </td>
             </tr>
-            <tr style="text-align: center;">
-                <td colspan="2" style="font-weight: bolder;">34</td>
-                <td colspan="27">
+            <tr style="text-align: center; ">
+                <td colspan="2 " style="font-weight: bolder; ">34</td>
+                <td colspan="27 ">
                     <p>
                         <em>Scova itself, is not a Testament, </em> </br>
                         <em>but the renewal of the Covenant of Humans with God.</em>
@@ -462,8 +576,8 @@
 
 
             <tr>
-                <td colspan="2" style="font-weight: bolder;">35</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">35</td>
+                <td colspan="27 ">
                     <p>
                         For that reason, I shall do no fighting here. <strong>Not now, not ever.</strong> I will simply rise to the uppermost echelon in oblivion and <em>establish order </em>from the top-down, on my own terms. The Absolute Truth still
                         remains absolute no matter how hard you try to twist up the words and try to push a particular narrative to suit your own agenda. In the end, however, truth alone triumphs, and God always finds a way.
@@ -471,8 +585,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">36</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">36</td>
+                <td colspan="27 ">
                     <p>
                         That <em>way</em>, in this spacetime, is Scova. You may ask, that why haven't you heard this name in the previous scriptures? When a new operating system is announced, does the company announce the version they are going to release
                         <em>after</em> the current version, or do they focus on the currently new version that the users should rightly get acclimated with first, before they rush onto thinking about what comes after?
@@ -480,8 +594,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">37</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">37</td>
+                <td colspan="27 ">
                     <p>
                         You can look for signs in vague prophecies, but really, what's the point? Even the people living through those prophecies have no absolute surety that the thing that they are currently living through is the one that they read about. That's the beauty
                         of prophecies – they can happen at any time, in any space, even repeatedly – because they are just bland ideas on top of which we add our own personal flavour, as dictated by our own internal, personal narrative, and contingent
@@ -493,8 +607,8 @@
 
 
             <tr>
-                <td colspan="2" style="font-weight: bolder;">38</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">38</td>
+                <td colspan="27 ">
                     <p>
                         If you are trying to run your life according to some obscure prose that some eccentric person wrote under divine inspiration for some other person in a future spacetime, then you've got the whole idea of scriptures backwards. Hopefully, you don't do that
                         with Scova.
@@ -505,8 +619,8 @@
 
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">39</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">39</td>
+                <td colspan="27 ">
                     <p>
                         Coming onto the point that previously bothered you, or alleviated your doubts (depending on your perspective or prejudice) – <strong>God is also not a Him</strong>. <em>I</em> am made in the image of God, as are you. We all possess
                         varied proportions of the male/female predilections, and no single complex is exactly the same. If we profess that humans cannot be fully defined by simplistic boxes of categorisation, why try that with God?
@@ -514,8 +628,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">40</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">40</td>
+                <td colspan="27 ">
                     <p>
                         For me, personally, the male facet is largely dominant. I'm born with a certain set of biological components whose presence cannot be overcome by <em>mental means alone</em>. To not accept that simple fact, is denying my bodily
                         self it's true potential. In doing so, I hinder my mental, true self, from showing it's complete texture, and my bodily self from living a full life. Unless you live up to your full potential, and accept all that makes you, You
@@ -524,8 +638,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">41</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">41</td>
+                <td colspan="27 ">
                     <p>
                         They did, however, fail to appreciate the beauty of it, and because of that, they left no room for further exploration of the human condition. The second lesson to learn here is this: if something that is said and is then held to be true, that, which
                         was assumed complementary to the thing that was said, but left unsaid, must not necessarily also be true. I'm sure the specie that learnt how to cause a rift in spacetime by splitting an atom can surely be trusted to interpret
@@ -534,8 +648,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">42</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">42</td>
+                <td colspan="27 ">
                     <p>
                         In the moments I was lost in the prisons of my own invention, agreeable to being submissive, kindred in the face of adversity, and in need of solace from the outside world – I saw God as a female entity, and She saw me as the same, because that's who
                         I was in the moment, and that's how I needed God in that moment. God is, and becomes who you need in the moment – He is formless, and so, the discussion over His gender, or lack thereof, is moot.
@@ -543,10 +657,10 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">43</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">43</td>
+                <td colspan="27 ">
                     <p>
-                        "Our Father in Heaven" is antiquity's version of <em>The Parent in Heaven</em>. People should really have adapted this with time. It's a damn shame how much oppression has been carried out in His name. It really is shameful the
+                        "Our Father in Heaven " is antiquity's version of <em>The Parent in Heaven</em>. People should really have adapted this with time. It's a damn shame how much oppression has been carried out in His name. It really is shameful the
                         status of women in our society has not been one of veneration, but of disdain. What the hell, people?
                     </p>
                 </td>
@@ -556,8 +670,8 @@
 
 
             <tr>
-                <td colspan="2" style="font-weight: bolder;">44</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">44</td>
+                <td colspan="27 ">
                     <p>
                         This was one of the very first commandments. If you, as a collective, have not understood the parts which are literally almost three millennia old knowledge, what is the point of me going forward and imparting new stuff? It clearly means to give equal
                         stature regardless of gender – to father, as well as to the mother, and to sister, as much to the brother, to son, the same as daughter – and so on an so forth. Why does it mean something different to you? If three thousand years
@@ -567,8 +681,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">45</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">45</td>
+                <td colspan="27 ">
                     <p>
                         In the moments when I was true to my own self<em> –</em> wilfully vulnerable, open to empathy, shackle-free and <strong>graciously uninhibited</strong> – I always perceived <em>Him</em> as a Him – because that was me actualising
                         <em>my true self, </em>and I could not have done it otherwise<em>. God is my father, and also, my best friend. </em>The idea of God, then, is subjective in the sense that He plays different roles for different people in different
@@ -578,8 +692,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">46</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">46</td>
+                <td colspan="27 ">
                     <p>
                         Why this disconnect with <em>the other </em>then? Why the judgement without careful examination? Why, instead of accommodating someone else's point of view into our own mindset, and creating a new, enriched understanding, do we
                         almost always have to push for an either-or scenario? What's with the extremism? Why do all these works made with the purest of intensions always lead to the same detriment?
@@ -587,8 +701,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">47</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">47</td>
+                <td colspan="27 ">
                     <p>
                         Wanting the entire world to believe you own interpretation is also highly ego-centric, don't you think? You are <em>only</em> a human. Put your house in order first, before you go around demanding social revolutions.
                     </p>
@@ -596,8 +710,8 @@
             </tr>
 
             <tr>
-                <td colspan="2" style="font-weight: bolder;">48</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">48</td>
+                <td colspan="27 ">
                     <p>
                         There is an <em>intrinsic</em> order to this world, and the traditions of continuity have existed, and persisted for so long, for a reason – I don't intend to uproot <em>all</em> of the good foundation just because I want to appeal
                         to a wider audience, or because I want to write something that goes along the <em>currents of my time</em>. Life is not a zero-sum game – there's something in it for everyone, and the Absolute Truth encompasses all of it, from
@@ -606,8 +720,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">49</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">49</td>
+                <td colspan="27 ">
                     <p>
                         I also, will blatantly disregard any and all attitudes that have creeped up to this time because of our failings as a collective, as those have been deemed unworthy of being preserved for posterity if sentient life on this planet (and further) has to
                         thrive en masse.
@@ -615,8 +729,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">50</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">50</td>
+                <td colspan="27 ">
                     <p>
                         There's a reason why scriptures need to be revised time and again despite all of them saying the same exact thing. They push forward what's best in us, and <em>graciously forgive the shortsighted failings</em>. Therefore, this
                         interpretation of the differing perception of God being contingent upon one's state of mind – I will leave up to the reader to decide for their self – you do you.
@@ -624,16 +738,16 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">51</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">51</td>
+                <td colspan="27 ">
                     <p>
                         Who am I do dictate what God should feel like to you? And if I am nobody to dictate such a ridiculous notion, what good is anybody else to do the same? What manner of human has that right, but your Self?
                     </p>
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">52</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">52</td>
+                <td colspan="27 ">
                     <p>
                         <em>This is Your interpretation of the Source – </em>
                         </br>
@@ -642,8 +756,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">53</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">53</td>
+                <td colspan="27 ">
                     <p>
                         Whatever your conclusion thereon, just know that it will have been your <em>own interpretation</em>, and <em>yours only</em> – other people do not have to agree with you – it is up to you to convince them <em>peacefully</em> of
                         your interpretation. Do it in the most poised way you know how, or do not do it at all. Let others bodies be as they want to be – your fulfilment and enlightenment as a sentient being, is not tied to <em>their</em> <em>personal</em>                        self-actualisation. Get a grip on your own life first, and then preach.
@@ -651,8 +765,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">54</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">54</td>
+                <td colspan="27 ">
                     <p>
                         You aren't responsible for their eternal judgment.
                         <br/> You, as a human, are truly, only responsible for your <em>own self</em>.
@@ -660,8 +774,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">55</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">55</td>
+                <td colspan="27 ">
                     <p>
                         Sure, by the end of Scova, you will have realised that there is just one self –<em>the self</em>, and <strong>there is nothing else in this world but the self and God</strong> – but I'm getting ahead of myself here. Having said
                         that, for the purposes of simplicity, tradition, and others that I will <em>reveal later</em>, I will stick to using HE. God is still gender neutral – but the aura surrounding His presence isn't – you decide that.
@@ -669,16 +783,16 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">56</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">56</td>
+                <td colspan="27 ">
                     <p>
                         <em>(Quran 75:37-39)</em>
                     </p>
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">57</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">57</td>
+                <td colspan="27 ">
                     <p>
                         Sure, in my younger years I have had certain inclinations, and I have more often than not erratically acted on them – but that in no way makes a current state of mind, the self's abject reality. That also does not mean that just because something isn't
                         true for the entirety of your life, for all your breathing moments – that it wasn't true in the moment that you were experiencing it. Grow, adapt, and evolve.
@@ -686,8 +800,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">58</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">58</td>
+                <td colspan="27 ">
                     <p>
                         Disregarding perceptual influences on the internal narrative reduces your sentient experience. Not everything is purely black and white. There are shades of grey, and all perceivable colours that don't fall on the spectrum. Yes, this is a reference to
                         the black and white perceived normality and the perceived contrast of the rainbow.
@@ -695,8 +809,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">59</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">59</td>
+                <td colspan="27 ">
                     <p>
                         This sparse texture, this lack of colour in the perceived norm of black and white, is exactly the kind of thing that the scriptures have warned us against. On the flip side, this idea that parts of the spectrum can be binned into demarcated subdivisions
                         is innately absurd, and flawed.
@@ -704,8 +818,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">60</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">60</td>
+                <td colspan="27 ">
                     <p>
                         In reality, the situation is quite nuanced in a manner that has not thus far been discussed. Why does the rainbow not include the ends of the spectrum that are black and white? In modernity's attempt to demarginalize the disenfranchised, the esprit of
                         the perceived normative has been restricted within a perimeter whose boundaries were never supposed to be drawn anyway.
@@ -713,8 +827,8 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="font-weight: bolder;">61</td>
-                <td colspan="27">
+                <td colspan="2 " style="font-weight: bolder; ">61</td>
+                <td colspan="27 ">
                     <p>
                         <em>
             "Ye are the salt of the earth: but if the salt have lost his savour, wherewith shall it be salted? it is thenceforth good for nothing, </em>but to be cast out, and to be trodden under foot of men."
