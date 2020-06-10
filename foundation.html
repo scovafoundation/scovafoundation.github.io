@@ -1,0 +1,148 @@
+<!doctype html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Scova, The Book</title>
+    <meta name="description" content="Scova, The Book">
+    <meta name="author" content="Anhad Singh Arora">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+
+    <style>
+        /* Style the header with a grey background and some padding */
+        
+        #header {
+            background-color: rgba(12, 170, 243, 0.5);
+            position: fixed;
+            /* Make it stick/fixed */
+            top: 0;
+            /* Stay on top */
+            width: 100%;
+            /* Full width */
+            transition: top 0.3s;
+            left: 0;
+            text-align: center;
+            max-height: 70px;
+            min-height: 50px;
+        }
+        /* Style the header links */
+        
+        #header a {
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            /* line-height: 25px; */
+            border-radius: 4px;
+            padding: 12px;
+        }
+        /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+        
+        #header-center {
+            font-weight: bolder;
+            padding: 12px;
+            /* text-align: center; */
+        }
+        
+        #header-center img {
+            height: 42px;
+            /* padding: 12px; */
+        }
+        
+        #header-left {
+            text-align: left;
+            padding: 12px;
+        }
+        
+        #header-left img {
+            height: 42px;
+            /* padding: 12px; */
+        }
+        
+        #header-right {
+            text-align: right;
+            padding: 12px;
+        }
+        
+        #header-right img {
+            height: 42px;
+            /* padding: 12px; */
+        }
+        /* Change the background color on mouse-over */
+        
+        #header a:hover {
+            /* background-color: darkblue; */
+            color: whitesmoke;
+            padding: 12px;
+        }
+        /* Style the active/current link*/
+        
+        #header a.active {
+            background-color: forestgreen;
+            color: darkblue;
+        }
+        /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+        /* @media screen and (max-width: 500px) {
+        } */
+        
+        th,
+        td {
+            padding: 15px;
+        }
+        
+        tr {
+            padding-bottom: 42pt;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+    </style>
+</head>
+
+<body style="font-size: 20pt;font-family:'EB Garamond', serif;background-color: white">
+
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("header").style.top = "0";
+            } else {
+                document.getElementById("header").style.top = "-55px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+
+    <div id="header">
+        <table style="width: 100%;table-layout : fixed;">
+            <tr>
+                <td id="header-left">
+                    <a href="# "><img src="images/book.png"></a>
+                </td>
+                <!-- <div class="header-left ">
+        <a href=# ">Chapters</a>
+    </div> -->
+                <td id="header-center">
+                    <a href="index.html"><img src="images/triquetra.png"></a>
+                </td>
+                <!-- <div class="header-left ">
+        <a href=# ">Chapters</a>
+    </div> -->
+                <td id="header-right">
+                    <a href="foundation.html"><img src="images/hands.png"></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+</body>
+
+
+
+</html>
