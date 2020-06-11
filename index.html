@@ -2621,6 +2621,7 @@
                 target.scrollIntoView({
                     behavior: 'smooth'
                 })
+                document.getElementById("mySidenav").style.width = "0";
                 history.pushState(null, null, hashval)
                 e.preventDefault()
             })
