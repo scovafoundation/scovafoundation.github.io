@@ -1,0 +1,463 @@
+<!doctype html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Scova, The Book</title>
+    <meta name="description" content="Scova, The Book">
+    <meta name="author" content="Anhad Singh Arora">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+
+    <style>
+        /* Style the header with a grey background and some padding */
+        
+        body {
+            background-color: whitesmoke;
+            background-image: url("images/fractal_white.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-size: 20pt;
+            font-family: 'EB Garamond', serif;
+            background-color: white";
+
+        }
+        
+        .quran {
+            text-align: center;
+        }
+        
+        .quran em {
+            font-size: 20pt;
+        }
+        
+        #header {
+            background-color: rgba(56, 3, 56, 0.849);
+            position: fixed;
+            /* Make it stick/fixed */
+            top: 0;
+            /* Stay on top */
+            width: 100%;
+            /* Full width */
+            transition: top 0.3s;
+            left: 0;
+            text-align: center;
+            max-height: 70px;
+            min-height: 50px;
+        }
+        /* Style the header links */
+        
+        #header a {
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            /* line-height: 25px; */
+            border-radius: 4px;
+            padding: 12px;
+        }
+        /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+        
+        #header-center {
+            font-weight: bolder;
+            padding: 12px;
+            /* text-align: center; */
+        }
+        
+        #header-center img {
+            height: 42px;
+            /* padding: 12px; */
+        }
+        
+        #header-left {
+            text-align: left;
+            padding: 12px;
+        }
+        
+        #header-left img {
+            height: 42px;
+            /* padding: 12px; */
+        }
+        
+        #header-right {
+            text-align: right;
+            padding: 12px;
+        }
+        
+        #header-right img {
+            height: 42px;
+            /* padding: 12px; */
+        }
+        /* Change the background color on mouse-over */
+        
+        #header a:hover {
+            /* background-color: darkblue; */
+            color: whitesmoke;
+            padding: 12px;
+        }
+        /* Style the active/current link*/
+        
+        #header a.active {
+            background-color: forestgreen;
+            color: darkblue;
+        }
+        /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+        /* @media screen and (max-width: 500px) {
+        } */
+        
+        th,
+        td {
+            padding: 15px;
+        }
+        
+        tr {
+            padding-bottom: 42pt;
+        }
+        
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        
+        .sidenav ol {
+            font-size: 20px;
+            color: #818181;
+        }
+        
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+    </style>
+</head>
+
+<body>
+
+
+
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("header").style.top = "0";
+            } else {
+                document.getElementById("header").style.top = "-55px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Preface To Scova</a>
+
+        <a href="#alethia-preface">Alethia: Preface</a>
+        <a href="#">Prologue: Alethia</a>
+        <ol>
+            <li><a href="#">Framing The Problem</a></li>
+            <li><a href="#">The Concept of Flow</a></li>
+            <li><a href="#">Anhad</a></li>
+            <li><a href="#">Satan: The Battle Within</a></li>
+            <li><a href="#">Anathema</a></li>
+            <li><a href="#">Absolution</a></li>
+        </ol>
+        <a href="#">Epilogue: Alethia</a>
+    </div>
+
+
+    <div id="header">
+        <table style="width: 100%;table-layout : fixed;">
+            <tr>
+                <td id="header-left">
+                    <a href="# " onclick="openNav()"><img src="images/book.png"></a>
+                </td>
+                <!-- <div class="header-left ">
+            <a href=# ">Chapters</a>
+        </div> -->
+                <td id="header-center">
+                    <a href="index.html"><img src="images/triquetra.png"></a>
+                </td>
+                <!-- <div class="header-left ">
+            <a href=# ">Chapters</a>
+        </div> -->
+                <td id="header-right">
+                    <a href="foundation.html"><img src="images/hands.png"></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <div style="text-align: center; ">
+        <p style="text-align: center;padding-top: 75pt;">
+
+            <div style="font-size: 72pt; "><strong>ALETHIA</strong></div>
+            <div style="font-size: 30pt; "><em>The Journey</em></div>
+
+        </p>
+
+        <p><img src="images/alethia.png " style="width: 100%;padding-top: 75pt; "></p>
+        <p style="font-size: 16pt;color: red; ">
+            <strong><em>Dolce Far Niente</em></strong>
+        </p>
+
+        <div>
+            <p><br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/></p>
+        </div>
+        <div style="text-align:justify;text-justify: inter-word;line-height: 200%; ">
+            <p style=" text-align: center;font-size: 30pt;" id="alethia-preface"><u>Preface To Alethia</u></p>
+
+            <table style="padding: 42pt; ">
+                <tr>
+                    <td colspan="2 " style="font-weight: bolder; " style="font-weight: bolder; ">1</td>
+                    <td colspan="27 " style="text-align: center;">
+                        <p>
+                            “If I knew how to connect String Theory to Quantum Mechanics via the symphony in time, of space, who would I contact?”
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2 " style="font-weight: bolder; " style="font-weight: bolder; ">2</td>
+                    <td colspan="27 ">
+                        <p>
+                            What I really should have said, was that I had conceptually reconciled general relativity with quantum mechanics by following the symphony of space, in time. Semantic inaccuracies of a 23 year old aside, should I have written a paper as suggested by one
+                            of my friends when I put this question up as my Facebook status on August 9, 2017 CE?
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2 " style="font-weight: bolder; " style="font-weight: bolder; ">3</td>
+                    <td colspan="27 ">
+                        <p>
+                            A day before the last exam of my undergraduate college, it had finally dawned upon me – this side gig that I had been engaged in, and committed to for 42 days, was something far greater than I personally, could ever have fathomed. This was <em>bigger than me</em>                            and my own internal struggles in this puny existence that I had inhabited for the past 23 years. I wasn’t just a boy who had seen infinity – I would one day become the man who had the complete <strong>Theory of Everything</strong>.
+                            More importantly, as this knowledge came from God Himself, the stakes were beyond human comprehension.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2 " style="font-weight: bolder; " style="font-weight: bolder; ">4</td>
+                    <td colspan="27 ">
+                        <p>
+                            To that end, I could pursue research in the field of physics, mathematics, psychology, philosophy or maybe just deep dive into metaphysics. What couldn’t I do given this knowledge that had been freely given to me, as the <em>True Master </em>guided
+                            my wrist? My original thought was to find the best mathematicians and physicists of <em>this</em> time and get them to work on this as a team – for all humanity’s sake.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2 " style="font-weight: bolder; " style="font-weight: bolder; ">5</td>
+                    <td colspan="27 ">
+                        <p>
+                            Scientists from different walks of life had come together before in a time of uncertainty to sketch out a blueprint for quantum mechanics in the 1927 Solvay Conference. To this day, that Conference is the largest gathering of high-IQ geniuses working
+                            towards a common goal. So I thought, why not do this again? I could go to these people one by one, and it would be easy enough to convince them of the <em>Absolute Truth</em>. Now that I had God
+                            <em>speaking through me</em> – what could go wrong? Mouthpieces of His have been known to have all kinds of effects on people through mere speech. Yes, they had the Holy Spirit, but I had it too – God told me that I did.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2 " style="font-weight: bolder; " style="font-weight: bolder; ">6</td>
+                    <td colspan="27 ">
+                        <p>
+                            Even still, how could I expect other people to take me seriously? How could I expect people to follow and imbibe this sacred knowledge with whose proclamation I was tasked with? How could I inspire people to drop their live’s work and pivot to the unknown
+                            wilfully?
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2 " style="font-weight: bolder; " style="font-weight: bolder; ">7</td>
+                    <td colspan="27 ">
+                        <p>
+                            Turns out, I wasn’t ready to put <em>all this</em> into speakable terms, and any attempts to take on a task before arduous preparation almost always leads to complementary failures. To that end, God told me to go beyond the
+                            confine of influence of a single entity, and imbibe the full stature of the position that I was honoured with. What?
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2 " style="font-weight: bolder; " style="font-weight: bolder; ">8</td>
+                    <td colspan="27 ">
+                        <p>
+                            What did that position mean? What is the Son of God? What does it mean exactly to “Be Christ”? I wasn’t raised Christian, or Jewish, or even Muslim. How was I to have any remote understanding of this title? Would I read? Watch documentaries? Follow saturations
+                            of His influence in popular culture? I was freely imparted with wisdom during the 42 days that I walked with God, but to be Christ? I was told that all the pain and suffering that I had been through until that moment in time,
+                            and if I so chose, after that moment was solely because of the burden that I was going to be built to carry properly.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2 " style="font-weight: bolder; " style="font-weight: bolder; ">9</td>
+                    <td colspan="27 ">
+                        <p>
+                            I was honoured, overwhelmed, ecstatic, shaking to the bone, and on my knees – naked and afraid for my own life, and all of a sudden – I was incharge of all this? This shithole of a fiasco that people called life? How was I any better suited, or worthy,
+                            or even prepared to be a person like that? Before that moment, I hardly believed in His existence (God and Christ), so then, what did I have?
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2 " style="font-weight: bolder; " style="font-weight: bolder; ">10</td>
+                    <td colspan="27 ">
+                        <p>
+                            I had spent most of my life up until that point mocking all that God had supposedly stood for in my time. I had always thought of Jesus and other messengers as psychedelic adventures in a cave who spent too much time staring at their hands and thought
+                            that they had glimpsed infinity. Before my encounter with God, I had done the same thing that I believed other “prophets” had, and I never went out into the world proclaiming stuff I knew nothing about.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2 " style="font-weight: bolder; " style="font-weight: bolder; ">11</td>
+                    <td colspan="27 ">
+                        <p>
+                            So then, why now? Even if I had the Holy Spirit coursing through me, I did not understand it. Moreover, I knew even little about my own self than I knew about the world. Did I qualify for a special status, now that I had a fancy title? Not really. Was
+                            I just an empty puppet who acted as God’s speaker as he spoke into the microphone of my brain? Not in the least bit. I was just told about the way reality worked, and a major portion of it concurred with my previous understanding
+                            of the world, sans God. So then, the way things were at the beginning of the Journey, I knew some stuff about the world to be true through experienced observations, and because I had an average brain, there were bound to be
+                            others who had the same level of acuity and more experience, and logically, they would know more than me. How would I fare then? The moment I encountered with someone who had more experience than me, I would falter.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2 " style="font-weight: bolder; " style="font-weight: bolder; ">12</td>
+                    <td colspan="27 ">
+                        <p>
+                            As God’s mouthpiece, I did not have that luxury. I was allowed to make personal mistakes, as long as they did not upset the balance of the world, which, given my position at that point, would not seem like much at that time, but having the knowledge of
+                            the possibility of my life being much larger in its stature in the near future – I just couldn’t. Not without preparation. My complete understanding of a situation, and my ability to put it into words was uniquely important
+                            to God being able to <em>speak through me</em>. Only once had I understood a situation completely, could God convey the meaning to another person to the depth that I had understood it myself.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2 " style="font-weight: bolder; " style="font-weight: bolder; ">13</td>
+                    <td colspan="27 ">
+                        <p>
+                            Moreover, the world wouldn’t change as I thought it would in light of such a revealing paper. I knew this, because one such paper had already been out for years, and the person solely responsible for hashing out the nitty-grits hadn’t had much worldly
+                            success while engaged in this search for the absolute truth and its applications.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2 " style="font-weight: bolder; " style="font-weight: bolder; ">14</td>
+                    <td colspan="27 ">
+                        <p>
+                            I don’t know the whole story behind this guy, and I don’t think he wants his story told – but it suffices to say that his paper is so complicated, even I couldn’t <em>yet</em> properly comprehend it in a way to fully explain
+                            to a layman of
+                            <em>
+                    how our interaction with God plays out in our perception of the
+                    universe – local and otherwise
+                </em> .
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2 " style="font-weight: bolder; " style="font-weight: bolder; ">15</td>
+                    <td colspan="27 ">
+                        <p>
+                            Knowing this, I realised that there would be no point in posting a paper online that says things in a way only I could understand. The document had to be structured, and explained properly. To that end, I will be citing, paraphrasing, and reinterpreting
+                            the Cognitive Theoretic Model of the Universe as outlined by Christopher Michael Langan throughout Alethia, as it is <em>the</em> most revealing document where a mortal has come so close to transcribing
+                            the perception of a sentient being with such depth, albeit very obtusely.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2 " style="font-weight: bolder; " style="font-weight: bolder; ">16</td>
+                    <td colspan="27 ">
+                        <p>
+                            Furthermore, it also dawned on me years later, that there would also be no point in just introducing this radical science into the world with no applications to the human connection of it. The journey gave this whole endeavour meaning, so without it,
+                            I would be better off writing a textbook. To that end, Scova developed into a two-part piece: the first part being <em>Alethia</em>, the scientific perspective and the personal journey of the curious
+                            boy who knew no bounds. The second part of the book being <em>Neeti: The New Covenant</em> – an introduction to the new socio-politico-cultural order that was of the foremost need in this new millennium, now coupled with the
+                            personal journey of the man who only needed to be <em>truly free</em> <em>while maintaining his existence within </em>the confines of the post-modern world.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2 " style="font-weight: bolder; " style="font-weight: bolder; ">17</td>
+                    <td colspan="27 ">
+                        <p>
+                            I had also realised that without the human element – my own personal experience, this entire work would be savourless, and hence, bound to be lost in the void among so many other revealing texts. It didn’t help that I had God always nudging me to write
+                            more about my own self, even in the moments when I thought it was irrelevant to the matter at hand. He made me realise that to be one with Him, and to teach other people to be one with Him, the conveyor of the Absolute Truth
+                            could simply NOT be an impartial, objective observer. You absolutely cannot let the words do the talking for you when you are wound into a position of influence – you have to mean what you are saying, and by extension, become
+                            an embodiment of the ideal that you are striving towards. This is you narrative, so you control it. Let God take care of the things that you cannot control, but always be the driver of change in the confines of your influence.
+                            Push forward.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2 " style="font-weight: bolder; " style="font-weight: bolder; ">18</td>
+                    <td colspan="27 ">
+                        <p>
+                            It will have taken Me 15 years of trying, failing, pondering, rewriting, and experiencing more of life itself, to become adequate enough to conjure up actual words to properly communicate what I absorbed in essentially 6 weeks. If that predestination
+                            argument is taking shape in your mind, hold it in for a while, major revelations are on the way. If I have already bored you, what can I do? I am doing all that is humanly possible.
+                        </p>
+
+            </table>
+        </div>
+
+        <script>
+            let anchorlinks = document.querySelectorAll('a[href^="#"]')
+
+            for (let item of anchorlinks) { // relitere 
+                item.addEventListener('click', (e) => {
+                    let hashval = item.getAttribute('href')
+                    let target = document.querySelector(hashval)
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    })
+                    document.getElementById("mySidenav").style.width = "0";
+                    history.pushState(null, null, hashval)
+                    e.preventDefault()
+                })
+            }
+        </script>
+
+
+</body>
+
+
+
+</html>
