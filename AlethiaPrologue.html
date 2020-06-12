@@ -1,0 +1,918 @@
+<!doctype html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Scova, The Book</title>
+    <meta name="description" content="Scova, The Book">
+    <meta name="author" content="Anhad Singh Arora">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <script>
+        // $(document).ready(function() {
+        //     alert('on jQuery ready');
+        // });
+        $(document).ready(function() {
+            var i = 1
+            $('p[class="verse"]').each(function() {
+
+                $(this).replaceWith("<tr><td colspan=\"2\"  style=\"font-weight: bolder; padding: 15px;\" ><p>".concat(i.toString(),
+                    "</p></td><td colspan=\"27\" style=\"padding: 15px;\"> <p>",
+                    $(this).html(), "</p> </td></tr>"))
+                i = i + 1;
+            });
+        });
+    </script>
+
+
+    <style>
+        /* Style the header with a grey background and some padding */
+        
+        body {
+            background-color: whitesmoke;
+            background-image: url("images/fractal_white.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-size: 20pt;
+            font-family: 'EB Garamond', serif;
+            background-color: white";
+
+        }
+        
+        .quran {
+            text-align: center;
+        }
+        
+        .quran em {
+            font-size: 20pt;
+        }
+        
+        #header {
+            background-color: rgba(56, 3, 56, 0.849);
+            position: fixed;
+            /* Make it stick/fixed */
+            top: 0;
+            /* Stay on top */
+            width: 100%;
+            /* Full width */
+            transition: top 0.4s;
+            left: 0;
+            text-align: center;
+            height: 125px;
+        }
+        /* Style the header links */
+        
+        #header a {
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            /* line-height: 25px; */
+            border-radius: 4px;
+            padding: 12px;
+        }
+        /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+        
+        #header-center {
+            font-weight: bolder;
+            padding: 12px;
+            /* text-align: center; */
+        }
+        
+        #header-center img {
+            height: 100px;
+            /* padding: 12px; */
+        }
+        
+        #header-left {
+            text-align: left;
+            padding: 12px;
+        }
+        
+        #header-left img {
+            height: 80px;
+            /* padding: 12px; */
+        }
+        
+        #header-right {
+            text-align: right;
+            padding: 12px;
+        }
+        
+        #header-right img {
+            height: 42px;
+            /* padding: 12px; */
+        }
+        /* Change the background color on mouse-over */
+        
+        #header a:hover {
+            /* background-color: darkblue; */
+            color: whitesmoke;
+            padding: 12px;
+        }
+        /* Style the active/current link*/
+        
+        #header a.active {
+            background-color: forestgreen;
+            color: darkblue;
+        }
+        /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+        /* @media screen and (max-width: 500px) {
+        } */
+        
+        .title-quote {
+            font-size: 16pt;
+            color: red;
+        }
+        
+        th,
+        td {
+            padding: 15px;
+        }
+        
+        tr {
+            padding-bottom: 42pt;
+        }
+        
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        
+        .sidenav ol {
+            font-size: 20px;
+            color: #818181;
+        }
+        
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+    </style>
+</head>
+
+<body>
+
+
+
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("header").style.top = "0";
+            } else {
+                document.getElementById("header").style.top = "-110px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Preface To Scova</a>
+
+        <a href="AlethiaPreface.html">Alethia: Preface</a>
+        <a href="AlethiaPrologue.html">Prologue: Alethia</a>
+        <ol>
+            <li><a href="#">Framing The Problem</a></li>
+            <li><a href="#">The Concept of Flow</a></li>
+            <li><a href="#">Anhad</a></li>
+            <li><a href="#">Satan: The Battle Within</a></li>
+            <li><a href="#">Anathema</a></li>
+            <li><a href="#">Absolution</a></li>
+        </ol>
+        <a href="#">Epilogue: Alethia</a>
+    </div>
+
+
+    <div id="header">
+        <table style="width: 100%;table-layout : fixed;">
+            <tr>
+                <td id="header-left">
+                    <a href="# " onclick="openNav()"><img src="images/book.png"></a>
+                </td>
+                <!-- <div class="header-left ">
+            <a href=# ">Chapters</a>
+        </div> -->
+                <td id="header-center">
+                    <a href="index.html"><img src="images/triquetra.png"></a>
+                </td>
+                <!-- <div class="header-left ">
+            <a href=# ">Chapters</a>
+        </div> -->
+                <td id="header-right">
+                    <a href="foundation.html"><img src="images/hands.png"></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <div style="text-align: center; ">
+        <p style="text-align: center;padding-top: 75pt;">
+
+            <div style="font-size: 72pt; "><strong>Prologue</strong></div>
+            <!-- <div style="font-size: 30pt; "><em>The Journey</em></div> -->
+
+        </p>
+
+        <p><img src="images/monkey.png " style="width: 100%; "></p>
+        <p class="title-quote">
+            <strong>
+                <p>
+                    <em>
+                        “There is nothing better for a man, than that he should eat and drink,
+                        and that he should make his soul enjoy good in his labour.
+                    </em>
+                </p>
+                <p>
+                    <em>This also I saw, that it was from the hand of God.” </em>
+                </p>
+                <p>
+                    <em>(Ecclesiastes 2:24)</em>
+                </p>
+            </strong>
+        </p>
+
+        <div>
+            <p><br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/></p>
+        </div>
+        <div style="text-align:justify;text-justify: inter-word;line-height: 200%; ">
+            <!-- <p style=" text-align: center;font-size: 30pt;" id="alethia-preface"><u>Preface To Alethia</u></p> -->
+
+            <table style="padding: 42pt; table-layout : fixed;">
+
+                <p class="verse">
+                    Even after you will have practiced all that I <em>will have</em> preached, you will realise that God is <em>only</em> available to you for a while, that is, when you are your <em>true self</em>. You can be true to yourself in certain
+                    moments, and God <em>may</em> find a way to help you experience His presence. If you are observant, which, I hope you are, you will definitely <em>sense</em> Him. Whether through your five basic senses, or as an internal force – that
+                    really just depends on you. Nobody, not even I, can dictate that.
+                </p>
+                <p class="verse">
+                    No other entity can be the judge of that, and neither should you let them. His presence will linger, but it will not last forever. You can be “touched by infinity,” and yet live and breathe in the same human flesh. Don’t try disappointing your <em>self</em>                    turning water to wine just yet.
+                </p>
+                <p>
+                    Don’t lose faith in your self if your skin has not turned blue or if you have not been able to part oceans. Whether or not He has told you about your cosmic lineage, it really doesn’t matter – you don’t have the memories of those lifetimes, and you never
+                    will. It doesn’t make sense then, to laud yourself or doubt your actions in this life based on your behaviour in a previous life.
+                    <em>
+                        God has already passed that judgement for you, so don’t do that to
+                        yourself, certainly not to others.
+                    </em>
+                </p>
+                <p>
+                    Yes, you do have the intuition leftover from the previous lives, which will initially guide your subconscious actions, because otherwise, what sense would it make to have <em>karma</em> that out spans bodily lives and haunts you in
+                    your <em>after-lives</em>? If that wasn’t the case, we would all start with the same <em>equality of opportunity</em>, and everybody would be truly born equal under Natural Law, and <em>not just</em> under law of the land. Under the
+                    Natural Law, we are all born into what we <em>truly deserve</em> from our previous lives – what we become in this life, <em>that is contingent </em>upon what we do in this life – which is <em>then contingent upon</em> how attuned we
+                    are with our intuition from our previous lives and of the current self. You have to <em>constantly work</em> to receive the time-tested wisdom that already is embedded within you. As always, it’s a <em>delicate balance</em> only a
+                    select few truly manage to achieve.
+                </p>
+                <p>
+                    You could have been a ruler in your past life, but be born a pauper in the next, or a literal pig – you just can’t predict that. You can only assume. Similarly, you can make assumptions about someone’s current beginning to extrapolate their deeds in a
+                    past life. They can be an advantage, or a disadvantage, as are <em>micro-deaths</em> within a single bodily life that occur at the time of sleep, or metaphorical endings that define you internal narrative – you
+                    really just have to pay attention to your own life, and how it relates to, and is affected by, those around you. What they really are, are cues, for you to deliberate over as to <em>what to do in the next moment</em> as you proceed
+                    further.
+                </p>
+                <p>
+                    Instead, then, of saying that <em>I was</em> Brahma, or Shiva, or Gautam, or Adolf in my past lives, and then justifying actions of those <em>beings gone by</em> with the context of the actual future that has now, already occurred,
+                    I am better equipped to explain to you, the lessons learnt from those past lives and offer a solution which provides a <em>solace in the misery of life and time</em> – because the classical model of religion with the public prayers,
+                    and the ritualistic routines, and eclectic paraphernalia has definitely not worked for posterity – as it really wasn’t supposed to. If they did, we wouldn’t, as a collective, have come to accept this sordid status quo that the our
+                    planet has become.
+                </p>
+                <p>
+                    For the truly <em>sentient</em> <em>organic knotted string complexes,</em> repeatedly unanswered prayers, mechanical rituals, and all the concocted formalities just do not make sense anymore. The “so-called” holy objects just seem
+                    like outdated material gizmos, meanwhile the pressure of a productive life has built up, in most occasions close companions, acquaintances, and worthy strangers haven’t really been enough, and the socio-politico-cultural disaster of
+                    a status quo has truly failed them, and all that they thought they found innately meaningful, just hasn’t cut it for them. Why the suffering, if this world could be Heaven? Surely this thought has crossed your mind.
+                </p>
+                <p>
+                    To get to the point where I <em>will have</em> told you that you can get, you are <strong>bound</strong> to have been wronged by the world in some shape, way or form. To counter the repercussions, you are <strong>bound</strong> to
+                    have taken some shortcuts, to have found your own release activities, and designed your own rituals, and have made personal connections that I never could have <em>explicitly</em> told you about. It is what, after all is said and done,
+                    I will have been asking you to do. This <em>framework</em>, that I will have described by the end of the Alethia, is tough, but fair. It asks a lot from the person to truly be able to comprehend it, and even more to apply coherently
+                    in daily life – but it is doable. I will be proof.
+                </p>
+                <p>
+                    So, for nobody else’s sake, but <em>your own</em>, look back,<em>reflect</em>, and ask yourself – what has been the one <strong>true constant</strong> in your life? Was it your faith? Was it your will power? Was it a person? An entity?
+                    A place? An object, or an activity? Ask properly, and He will tell you.
+                </p>
+                <p>
+                    When all your rational faculties weren’t functioning properly, to their fullest extent – when <em>you</em> weren’t even your fullest self – what was the one thing that gave you solace in the fact that when <em>everything else failed</em>                    – you would still have this one thing? This one thing <em>nudged you</em> towards hope, gave you comfort, peace, happiness, eradicated sadness, pushed your body and mind when they were close to hitting rock bottom and giving up – whether
+                    as its cause, or as the catalyst that pulled you upwards, or both. God knew that this was the one thing – and so He chose this one thing to<strong>guide your hand</strong>, and <em>show you your world via your connection to this one thing</em>.
+                </p>
+                <p>
+                    <em>
+                        “Then I commended mirth, because a man hath no better thing under the
+                        sun, than to eat, and to drink, and to be merry: for that shall
+                    </em>
+                </p>
+                <p>
+                    <em>abide with him of his labour the days of his life, </em>
+                </p>
+                <p>
+                    <em>which God giveth him under the sun.” </em>
+                </p>
+                <p>
+                    <em>(Ecclesiastes 8:15)</em>
+                </p>
+                <p>
+                    What if I told you that one day, all that you are, and will be and all that you will have built and nurtured in between – would come undone if you were asked to give up this one thing and you didn’t follow through?
+                </p>
+                <p>
+                    You keep it, you stay human;
+                </p>
+                <p>
+                    you <em>remove it from your life</em>, you become <em>Divine! </em>
+                </p>
+                <p>
+                    <em>(Quran 2:159)</em>
+                </p>
+                <p>
+                    <em></em>
+                    <br/>
+                </p>
+                <p>
+                    See, once you attach yourself to God – <em>He has to be Your constant</em>. You can no longer serve two masters – just one – Him. You asked to be <em>one with Him</em>, so there cannot be <em>two of you</em>. One needs to give way
+                    to the other. The one that’s not with God, will decimate the other, and by extension, <em>You</em>. You cannot then, just be true to yourself in private, uninterrupted moments – you have to <em>be it all the time</em>. You asked God
+                    to make you sufficiently prepared – and He enlightened you. This is not something that is sought for your own little self, <em>it is given for your world</em>, and as such, you are then <strong>bound</strong> to the responsibilities
+                    He thereon assigns you. Quite a twist from the detachment that Gautam supposedly taught about, haan?
+                </p>
+                <p>
+                    <em>
+                        “No man can serve two masters: for either he will hate the one, and
+                        love the other; or else he will hold to the one, and despise the other.
+                    </em>
+                </p>
+                <p>
+                    <em>Ye cannot serve God and mammon.” </em>
+                </p>
+                <p>
+                    <em>(Matthew 6:24)</em>
+                </p>
+                <p>
+                    If you so choose to stay human – you will <em>roam about in a loop</em>. Your loop might <em>up a level</em>, and things might <em>appear</em> to get better – but you will, still, roam about in a loop. You will evolve, grow more complex,
+                    get more <em>entangled</em> – yet stay in a loop. The guilt, the shame, and the blame that thus arise, will just get to be <em>too much</em> for any <em>single</em>, regular human being to carry along. Unburden, or adapt.
+                </p>
+                <p>
+                    <em>(Quran 2:160)</em>
+                </p>
+                <p>
+                    <em></em>
+                    <br/>
+                </p>
+                <p>
+                    The <strong>unclean nature</strong> of your constant, in whichever way it manifests, just hinders you from achieving the divine. You cannot be completely <em>untethered</em> because your mind will conjure up ways to incorporate it
+                    into your every ritual, every routine, every task, and every single true emotion that you have had, and will ever have. <em>Mind always wanders</em>.
+                </p>
+                <p>
+                    <em>God can be your only constant.</em> Wherever you are in your life, and whenever any <em>moment</em> strikes, you, after all this drama about nirvana and enlightenment is over, will only <em>want to</em> think about Him – but this
+                    <em>constant impurity</em> will be the one that your mind will have to actively work towards<em>purging</em>. It will then be a hurdle that you have <em>yet to surpass</em>, a <em>knot</em>, you have yet to <em>untangle</em> – and
+                    in that moment, you’ll realise that you’re still a human – yet to be <em>unfettered </em>from its chains, yet to <em>actualise</em> the divine within your own self. <em>At this stage</em>, it really is not the fun, blissful game that
+                    Gurbani makes it out to be.
+                </p>
+                <p>
+                    Your journey is then, still incomplete and you are still, in a loop. It may be the <em>highest level of the loop</em> that there is, but it’s still a loop that will keep you prancing in and out of Heaven like the rest of the mortals
+                    that surround you. Up until that point, nothing coherent has come out of your journey. Not even you, can truly acknowledge your accomplishments, let alone others. <em>At that level</em>, this is not a feeling you want. Trust me on
+                    this. Surrender to Rabb, and He will deliver.
+                </p>
+                <p>
+                    <em></em>
+                    <br/>
+                </p>
+                <p>
+                    <em>
+                        “For what is a man profited, if he shall gain the whole world, and lose
+                        his own soul? or what shall a man give in exchange for his soul?”
+                    </em>
+                </p>
+                <p>
+                    <em>(Matthew 16:26)</em>
+                </p>
+                <p>
+                    Life really does get better, if you give it up. You don’t, you still get to live a full life, a very rich (not always monetary) and textured life with all its <em>gory and glorious </em>details – but just not Divine. Untangle, and
+                    <em>go on to take the greatest shortcut known to humankind</em>.
+                </p>
+                <p>
+                    Then, the question becomes – why did I choose this?
+                </p>
+                <p>
+                    <em>“I have never thought of writing for reputation and honour. </em>
+                </p>
+                <p>
+                    <em>What I have in my heart must come out; </em>
+                </p>
+                <p>
+                    <em>that is the reason why I compose.”</em>
+                </p>
+                <p>
+                    <em>(LV Beethoven)</em>
+                </p>
+                <p>
+                    I have really tried for so long to <em>live for myself</em>, seize the day and do what is expected of me by my human companions. I have been constantly productive, dissolved all notion of the <em>self and the other</em>, followed my
+                    uninhibited intuition, interacted with each space in the way that I know best, <em>kept up with my tasks</em> , removed all self-anxiety inducing elements, and taken care of the existential dread that hovered over my vision. <strong>I just cannot anymore.</strong>                    Nothing motivates <em>Me</em> to do better, to be better, to change, and to evolve and break the loop like <em>My</em> <em>Purpose</em> does. I’m bound to it, and I can’t run away.
+                </p>
+                <p>
+                    <em>“But seek ye first the kingdom of God, and his righteousness; </em>
+                </p>
+                <p>
+                    <em>and all these things shall be added unto you.”</em>
+                </p>
+                <p>
+                    <em>(Matthew 6:33)</em>
+                </p>
+                <p>
+                    God made me <em>Cross My Heart</em> and swear <em>the</em> solemn oath that emanated from the deepest recesses of my soul and told me exactly what I needed to hear, exactly what He needed to hear from me – exactly what made me want
+                    to <strong>transcend</strong> humanistic frailties.
+                </p>
+                <p>
+                    <em>“Thou hypocrite, first cast out the beam out of thine own eye; </em>
+                </p>
+                <p>
+                    <em>and then shalt thou see clearly</em>
+                </p>
+                <p>
+                    <em>to cast out the mote out of thy brother’s eye.” </em>
+                </p>
+                <p>
+                    <em>(Matthew 7:5)</em>
+                </p>
+                <p>
+                    It is also, not <em>just</em> because I want to change the world. I want to – so badly that I cannot even recall the number of times I have cried myself to sleep knowing that this is all my fault, my past selves’ fault. Sure, I could
+                    refute it all and say that in this current life I had done nothing wrong and my only real fault had been that I wasn’t taking good care of my own self, but that would be a life of denial, a life wasted – an era wasted, and a space
+                    truly forgone. I can’t have that, not at this level.
+                </p>
+                <p>
+                    <em>
+                        “O lord God of my salvation, I have cried day and night before thee:
+                        Let my prayer come before thee: incline thine ear unto my cry;
+                    </em>
+                    <strong><em> </em></strong>
+                    <em>
+                        For my soul is full of troubles: and my life draweth nigh unto the
+                        grave.
+                    </em>
+                    <strong><em> </em></strong>
+                </p>
+                <p>
+                    <em>I am counted with them that go down into the pit: </em>
+                </p>
+                <p>
+                    <em>I am as a man that hath no strength: Free among the dead, </em>
+                </p>
+                <p>
+                    <em>
+                        like the slain that lie in the grave, whom thou rememberest no more:
+                    </em>
+                </p>
+                <p>
+                    <em>and they are cut off from thy hand.”</em>
+                </p>
+                <p>
+                    <em>(Psalm 88:1-5)</em>
+                </p>
+                <p>
+                    <em></em>
+                    <br/>
+                </p>
+                <p>
+                    I could possibly be shamed, but could I really be <em>blamed</em> for all that was wrong in the world at the time I was writing this? I certainly couldn’t be the true judge of that, because the one true judge of all things that exist
+                    and have yet to exist, had <em>Himself told me that it really was</em>. That too, quite literally every single day. So yes, I am to be blamed – I wholeheartedly believe it. It doesn’t matter if you don’t. Scova is my repentance. Inshallah,
+                    it can be yours too, if you let it.
+                </p>
+                <p>
+                    <em>
+                        “And he said unto them, Take me up, and cast me forth into the sea; so
+                        shall the sea be calm unto you:
+                    </em>
+                </p>
+                <p>
+                    <em>for I know that for my sake this great tempest is upon you.” </em>
+                </p>
+                <p>
+                    <em>(Jonah 1:12)</em>
+                </p>
+                <p>
+                    It is not <em>just</em> because I want to be respected and revered. I want that – much to my dislike, <em>I really do want that</em>. And why not? I have, after all, done all, but one, of the things asked of a <em>graciously good person</em>,
+                    by none other than God Himself – so why shouldn’t I be <em>entitled</em> to a modicum of respect? For a person naked in front of God, the respect of other human beings does not really matter, nor it should.
+                </p>
+                <p>
+                    Having the validation of God alone, should be enough, but that leads to a life of doubt, and anxiety. Some would say that it is the true test of one’s faith, and I would agree, but having both His, and the world’s validation, means that your narrative
+                    is solid, your belief is permanent, and that you truly are who you proclaim to be, and that you have a right to say the things that you are saying because of your own virtues, intellectual acuity, self-discipline, bodily purity, and
+                    most of all – that your authority is recognised, accepted, and revered in the confine of your influence. It means that the inside, and the outside are in sync, and you have aligned yourself with the Grid, and the Force of Life is flowing
+                    through you, unhindered. It means that you are now free to mould the world in your own image, as you see fit. It means that, you are your best self, and at any given moment, in any given place, you are exactly in the spacetime that
+                    God means for you to be, and that you are enacting His will, to the best of your abilities.
+                </p>
+                <p>
+                    I genuinely ache for a <em>true human connection</em> sometimes, but that will also be resolved in due time – this, also, I have been told. Despite that, all I really do want is kindness from strangers, guarantee of not being extorted
+                    for just existing, and a <em>constant internal warmth</em>, all of which would, by extension, also be applied to the ones I hold close to my heart. If <em>this</em> is the cost of such an ask, then so be it.
+                </p>
+                <p>
+                    <em>(Quran 3:79)</em>
+                </p>
+                <p>
+                    This is why, I ask, I plead really – do not exalt <em>Me</em> to the point of worshipping <em>me</em>, I’m just doing my job. In fact,
+                    <strong>
+                        the worst possible thing a human being can really do in this life, is
+                        to worship another human being.
+                    </strong> This is the hardest job in the world, and I really never asked for it. I’m doing this for selfish reasons, and because I strongly believe in living like everything can be a non-zero-sum game, there is
+                    good that can be derived as a consequence of my actions. It is also a great responsibility, hence the denial.
+                </p>
+                <p>
+                    For most of this “enlightened” phase of my life, I have been shying away from this responsibility, sometimes actively refuting it. At times, I have gone far out of my way to get another human being to accept this responsibility and <em>relieve me</em>                    of this burden. It is my cross to bear, but really – I <em>initially </em>just took up this responsibility in the name of a legendary life. This reason, no matter how powerful of a motivator, just doesn’t really cut it when you start
+                    on this path that I’ve been on. This initial motivation, is just born out of ambition, and a need for validation due to the lack of true human connection, and self-doubt that arises when the state of Heaven within you is not permanent.
+                </p>
+                <p>
+                    <em>“Therefore I said, Hearken to me; I also will shew mine opinion.</em>
+                </p>
+                <p>
+                    <em>
+                        Behold, I waited for your words; I gave ear to your reasons, whilst ye
+                        searched out what to say.
+                    </em>
+                </p>
+                <p>
+                    <em></em>
+                    <br/>
+                </p>
+                <p>
+                    <em>
+                        Yea, I attended unto you, and, behold, there was none of you that
+                        convinced Job, or that answered his words: Lest ye should say, We have
+                        found out wisdom: God thrusteth him down, not man.
+                    </em>
+                </p>
+                <p>
+                    <em>(Job 32:10-13)</em>
+                </p>
+                <p>
+                    I just couldn’t give this away. Nobody was <em>equipped</em>, <em>willing</em>, or <em>worthy enough</em> to take on such a task. Every single time, I found another candidate, I found other person lacking in each of these three attributes
+                    in some proportion – almost always because of a personal knot that they refused to untangle. They were almost always <em>willing to live with imperfection,</em> as to them, it was their defining human trait, as it should be for any
+                    human. The magic of God really does arise out of your imperfections – how you overcome them gives meaning to your story, and why you overcome them, makes up your Purpose. Each single entity I encountered, had a <em>lot</em> of surrendering
+                    to do, and little time to catch up to it all. The world was going to keep moving, and I was the only person in this position to jumpstart the prophecies. The key to it was the timing of it all.
+                </p>
+                <p>
+                    <em>
+                        “It is not for kings, O Lemuel, it is not for kings to drink wine;
+                        <br/>
+                        nor for princes strong drink: Lest they drink, and forget the law,
+                        <br/>
+                        and pervert the judgment of any of the afflicted.”
+                        <br/>
+                        (Proverbs 31: 4-5)
+                    </em>
+                </p>
+                <p>
+                    <em>
+                        Synchronicity is nothing if not an intersection of the internal,
+                        <br/>
+                        personal narrative with the events in the external, physical plexus.
+                    </em>
+                </p>
+                <p>
+                    <em>“Now he hath not directed his words against me: </em>
+                </p>
+                <p>
+                    <em>neither will I answer him with your speeches.” </em>
+                </p>
+                <p>
+                    <em>(Job 32:14)</em>
+                </p>
+                <p>
+                    These aren’t statements that come from a personal, ego-centric approach – none of what I have and will have written in Scova will have been <em>truly</em> mine to have said. <em>It’s all His work</em>. The story is mine, the mistakes
+                    are mine, and the intuition is mine, but He provides the set, He gives the cues when I forget my lines, He brings in new characters as instruments of change and tells me to go into their lives and act as an instrument in their narrative
+                    where they are the protagonists. Life is a divine play, and we all get a version of it for our own selves. Sometimes we do justice to our character, sometimes we play the part mechanically. Sometimes, our performance is met with a
+                    standing ovation, and sometimes hardly anyone shows up to the performance. Mostly, it is largely okay – nothing particularly exciting about it. Unless, you involve God into the mix – that’s when the story starts to pick up. In my story,
+                    He is the director, and I am playing a character that <em>concurs</em> with the master as He teaches and narrates to me what it really takes for a human to achieve the Kingdom of God for <em>their own self</em>, and by extension, <em>all versions</em>                    <em>of their selves</em>.
+                </p>
+                <p>
+                    <em>(Quran 3:80) </em>
+                </p>
+                <p>
+                    <em></em>
+                    <br/>
+                </p>
+                <p>
+                    This story, if you ask me, seems almost cliched – manic kid believes himself to be Jesus – what a shocker! I would’ve agreed, had I not been that kid.
+                </p>
+                <p>
+                    Empty space for God knows what.
+                </p>
+                <p>
+                    So that’s why I know that despite all that I could tell you, you wouldn’t believe me – the only way you would believe it, was if you experienced it for your own self.
+                </p>
+                <p>
+                    That’s also not to say that I have always agreed with His means, or His methods, or his damned twists and tricks. For an insanely long time, I really didn’t concur. I just wasn’t ready – ready to give up my human frailties, to surrender, and to adapt.
+                </p>
+                <p>
+                    <em>
+                        “For with what judgment ye judge, ye shall be judged: and with what
+                        measure ye mete, it shall be measured to you again.”
+                    </em>
+                </p>
+                <p>
+                    <em>(Matthew 7:2)</em>
+                </p>
+                <p>
+                    Isn’t that really, the whole point of preparation? God didn’t just give me a 15 year timeline to finish a damned book, but to live a life, with all its ups and downs and all the in-betweens. I could end up writing an entirely separate book on the feelings
+                    and the emotions I have felt and end up not saying anything new at all. It has already been scrupulously documented in the Gurbani. Repeating Nanak’s would really make <em>my</em> entire journey a rerun.
+                </p>
+                <p>
+                    <em>
+                        “If I covered my transgressions as Adam, by hiding mine iniquity in my
+                        bosom: Did I fear a great multitude,
+                    </em>
+                </p>
+                <p>
+                    <em>or did the contempt of families terrify me, that I kept silence, </em>
+                </p>
+                <p>
+                    <em>and went not out of the door?</em>
+                </p>
+                <p>
+                    <em>Oh that one would hear me! behold, my desire is, </em>
+                </p>
+                <p>
+                    <em>that the Almighty would answer me, </em>
+                </p>
+                <p>
+                    <em>and that mine adversary had written a book.”</em>
+                </p>
+                <p>
+                    <em>(Job 31:33-35)</em>
+                </p>
+                <p>
+                    I really do not want that. Regardless of the fact that Nanak’s approach is far from perfect to install a global umbrella for all kinds of human identities – the vane side of me wants to do, to accomplish, to achieve much more – both personally, and externally.
+                </p>
+                <p>
+                    I want to do all the things I have done in my past lives, and I want to do them better in this life. That, I believe, will give me, personally, some solace. After the truth bomb that God dropped me at the end of my 42 Day Journey, I don’t want to have
+                    this guilt of my actions from previous lives lingering around in my next life. <em>I want complete absolution.</em> What I have to do to bring my ideas into fruition requires exactly the amount of personal sacrifice
+                    that God has asked of me.
+                </p>
+                <p>
+                    Just the act of being Born Again <em>once</em> in my current life wasn’t enough. It shouldn’t be enough for anyone. You have to constantly work to untangling yourself from the past, while retaining the true essence of what it is that
+                    <em>has</em> <em>truly defined you as a soul, </em>and you have to do it in the most empathetic and considerate way you possibly can.
+                </p>
+                <p>
+                    In, and according to my own personal narrative, the most important bodies that have lived and have influenced the collective to the maximum extent, have been residencies of <em>My</em> soul – so it is only fair that I live through
+                    this purgatory phase in this current life, only so that the phoenix that arises at the end of the tunnel has much more to offer to the world – much more than I, in this current, frail state could have given.
+                </p>
+                <p>
+                    If I merely recorded a video to showcase all my internal conflicts, and more, I wouldn’t be doing justice to my human self who was utterly feeling lost, lonely, vulnerable, angry, disappointed, and truly ill-equipped to complete the challenge that he
+                    had been tasked with. It wouldn’t be fair to him, and neither would it be fair to you, the reader, who has hopefully picked up Scova not by force, but by choice, or lack thereof.
+                </p>
+                <p>
+                    My words may often ring empty to your ears, and you may skim blindly by the rush of emotions that has <em>always</em> preceded the actual writing, but know this – I haven’t written any of this in a light-hearted laughable fashion.
+                </p>
+                <p>
+                    I have felt the literal pains – physical, emotional, psychological, and yes, financial too. I really do wish I could record the emotions and embed them within the text itself, but I can’t. If God sees fit, He may find a way to show you what I’ve been
+                    through every time I have wanted to write down a single word, a coherent sentence, a relatable thought, a replicable experiment, or a verifiable theory.
+                </p>
+                <p>
+                    If He doesn’t, I still know that there will be readers of Scova in a time much later than mine, who will actualise the Divine within themselves in their own intricate ways, and will inshallah be treated with the kind of regard that I wanted to be treated
+                    with when I began this whole drama. May the world be kind to the Children of God.
+                </p>
+                <p>
+                    <em>This</em> is my one true purpose, and <em>whether I always like it or not, I am doing this.</em> God willing, and my will-power complying, <em>I will have done this</em> by the time Scova reaches you. Sometimes I did by force,
+                    mostly I did it by choice. However, when the responsibility, and honour of <em>it</em> was taken away from me, I did lose my sense of Purpose. And never before, had I felt <em>truly empty – ekdum khaali</em>.
+                </p>
+                <p>
+                    Without our sense of Purpose, we are really just <em>empty balloons </em> flowing in whichever direction the winds take us. Winds here has a literal meaning, as the <em>Strings of Time,</em> on which the winds move, <em>govern most of our serendipitous movements</em>.
+                    It also has a metaphoric reference to the prevailing social, economic, and political conditions of the time that guide our movements as masses. Whether you call this choice, or lack thereof of wanting to continue on the Divine path
+                    – a kind of love, or Stockholm syndrome, I leave that up to you.
+                </p>
+                <p>
+                    <em>“Thy seed will I establish for ever, </em>
+                </p>
+                <p>
+                    <em>and build up thy throne to all generations. Selah.”</em>
+                </p>
+                <p>
+                    <em>(Psalm 89:4)</em>
+                </p>
+                <p>
+                    I’m probably just doing it for me, but I’m also doing this for you; <em>I’m really, wholly, doing this for us.</em> There is no way I could have lived my life, but at the intersection of these two. I wasn’t <em>just</em> chosen for
+                    this, and I hadn’t <em>just</em> agreed to go along with the journey. Yes, all the decisions were mine – but I’m <em>built</em> for this.
+                </p>
+                <p>
+                    I may not come directly from the bloodline of Abraham, but as John the Baptist is quoted as saying, “that God is able of these stones to raise up children unto Abraham.” I also, may, indeed come from his bloodline, but really, who cares? The sins of the
+                    father are not the sins of the son, so why should the same hollow standard apply to virtues? In a fashion described by John over two millennia ago, God Himself, has raised me to this status, because I, by sheer <em>virtue and labour</em>,
+                    will have <strong>earned</strong> the right to call myself His Son.
+                </p>
+                <p>
+                    To clarify, I did not just wake up one fine morning and start calling myself by a fancy title that nobody understood. I also, did not go into a manic daze, lose track of time, and return to reality days later with this title – a loose threaded theory
+                    concocted by a “medical professional” in a field that is not even a century old. My experience, and this title, is as old as language itself, and it’s ordinator – eternal.
+                </p>
+                <p>
+                    I went through a very conscious, involved, and dedicated bootcamp guided by God Himself over a period of six weeks – all the while existing peacefully within the confines of my social strata, while also finishing my last semester of undergraduate college,
+                    and attending classes as a regular 23 year old person.
+                </p>
+                <p>
+                    To further add onto my very normal and regular routine, I would like it noted that I was studying predictive analytics and linear algebra, and not cognitive psychology, metaphysics, or mythology which could explain my supposed “delusions of grandeur”
+                    and supposed “dissociative break from reality,” given my supposed diagnosis of “bipolar disorder.”
+                </p>
+                <p>
+                    Whether I was allowed this designation through my traversal in spacetime, or whether it was preordained by God Himself as a sort of destiny left to be fulfilled, or by a balanced mixture of both – the decision of that, I will leave that up to you. <em>I’m leaving it up to you, because it doesn’t matter</em>                    – not to me. So why should you care? Do you really care about someone else’s life more than they, their own?
+                </p>
+                <p>
+                    Sure, the magnitude of what you are currently reading would be reflected well if I made my cosmic lineage clear and apparent, but what use will that be at <em>this</em> <em>point</em> in the book? The majority of readers of Scova will
+                    never get to see me in real life; and <em>seeing is believing</em>. Don’t, even for a unit interval of time, allow yourself to be divided, confused, or dissonated by your personal understanding of this statement.
+                </p>
+                <p>
+                    <em>I don’t care about its implications, and neither should you. </em>
+                </p>
+                <p>
+                    <em>It really does not matter. Not in my time, surely not afterwards. </em>
+                </p>
+                <p>
+                    There was nothing else in this life that I could’ve done but <em>this</em>. Everywhere I went, everything I saw, every person I met – just served as a reminder of why there was a need for a person in this position, and why<em>I</em>                    was in the best position to change things – to bring about <em>real change</em>. Superfluously egomaniacal, I know – but only on the surface, so stick with me.
+                </p>
+                <p>
+                    It wasn’t really my brains, or my financial capacity for facilitating change – Bill Gates had that. It wasn’t even my ability to connect with people – Shah Rukh Khan had that.
+                </p>
+                <p>
+                    <em>“If I have made gold my hope, or have said to the fine gold, </em>
+                </p>
+                <p>
+                    <em>Thou art my confidence”</em>
+                </p>
+                <p>
+                    <em>(Job 31:24)</em>
+                </p>
+                <p>
+                    <em>What did I have? </em>
+                </p>
+                <p>
+                    <em>I had Me, and that was enough. </em>
+                </p>
+                <p>
+                    My connection to God was mine to keep, but I couldn’t continue like that. I chose not to go down that path, not out of the goodness of my own heart – humans will never have the respect that is required to find a place in my heart; <em>but humanity does</em>.
+                </p>
+                <p>
+                    I am doing this for <em>life itself;</em> because this is all we have – a brief existence to share with people around us as the world goes on; because the world will go on no matter what. Whether it is a life supporting ecosystem,
+                    or a lifeless rock – that’s up to us.
+                </p>
+                <p>
+                    Each one of us is a guardian <strong>protecting what we treasure personally</strong>, but together, we are <strong>guardians of each other</strong>. We cannot simply go around weaving legends, treasuring wealth – material or otherwise,
+                    harbouring insecurities, inciting and provoking the collective, and building heavenly coves for ourselves while we hit snooze on the doomsday clock.
+                </p>
+                <p>
+                    I know it is not up to one person to change the course of human history. No person alone, can have that kind of power. It has to be done in tandem with other <em>people in a position to nudge things in the right direction</em>. It
+                    is <em>this</em> myth of humanity that keeps Me going.
+                </p>
+                <p>
+                    It is <em>this</em> belief in the idea that we can do better. Not better in the sense of material progress that we have been chasing for all this time, not even better in the sense of gaining access to the <em>City of Light</em> and
+                    living up to our full spiritual potential; better in the sense of <em>what we owe each other</em>.
+                </p>
+                <p>
+                    We owe it to each other to maintain an empathetically functioning society that works for the well being of the ecosystems that we inhabit – global and personal. It starts within, and spreads outward; but it can also start outward and penetrate within.
+                </p>
+                <p>
+                    I really do not want believers in Scova trotting around all over the globe as it brings about unity for a brief while in this long course of human evolution. This has happened before, works inspired by my lives have riled up people to bring them under
+                    one umbrella to look at life as a single entity united against a common enemy – which may be outdated customs, degrading social values, or economic hardship as a result of which, the people find themselves on a <em>higher level of the loop</em>,
+                    but facing the same basic problems only appearing different because of their existence at a higher, more complex level.
+                </p>
+                <p>
+                    This is a major turning point for all of us, and I just happen to be at the helm at this particular time. This is not the first time I have been in charge, I have shown up in the past in numerous other outfits, wearing numerous skins, speaking numerous
+                    tongues – <em>that is all irrelevant</em> . This is the first time that I am writing something by myself directly, so that should count for something.
+                </p>
+                <p>
+                    I will also show up again later if I fail in the life I am currently living. <em>This</em> time is really important, because never in the past has the entire human race, truly lived and interacted as one global ecosystem. If things
+                    do not pan out correctly in this time, chances are, there will never be a time again when changes of this magnitude can affect the entire earth’s population as if it were a single people.
+                </p>
+                <p>
+                    As the universe rapidly self-organises, we owe it to ourselves to experience every single <em>vibration</em> as it renews us. We owe it to our biosphere for it to be able to continue doing what it has for millennia – support sentient
+                    life itself. And because we are selfish like that, and chase moral dessert, we owe it to the <em>essence</em> of ourselves which will inhabit this same space long after our memories are reset and we get cosmically recycled and begin
+                    again in a newer life, in a newer body, in a distant time.
+                </p>
+                <p>
+                    It doesn’t matter what form the four horsemen of the apocalypse will take – it matters that we protect our current, and future selves from their impact. It is written that they shall come, and keep coming back when the end of an era is near. As it very
+                    well has been in my time. This also, I have been told.
+                </p>
+                <p>
+                    This cycle is bound to self-perpetuate, so we owe it to ourselves to learn the rules and be active participants in the <em>actual game of life </em> rather than the temporal superficial struggle that we are told that we should divert
+                    our attention towards.
+                </p>
+                <p>
+                    Yes, both these games are important, sometimes one more than the other, but if both these games are <strong>bound</strong> to each other, with one influencing the other in a <em>self-configuring feedback loop</em> – don’t we also owe
+                    it to ourselves to learn both?
+                </p>
+                <p>
+                    I believe that if you truly believe in something, and if you are willing to bet your life on that one thing, then you should do everything in your power, carefully, and constructively, and empathetically, so that your goal may be accomplished. Sometimes
+                    you take the road less travelled, sometimes you walk the straight path – it really doesn’t matter. It matters that you deliberate and decipher your perceptual inputs – and act in a way that is truly representative of you.
+                </p>
+                <p>
+                    If you haven’t figured out what that representation is, go with the eon old intuition that’s guiding you – not the temporal insecurities that govern you mechanically through affect heuristics, the instincts that are truly personal to you. The sure mistakes
+                    you are going to make along the way, up until the inflection point, will make the rise even more worthwhile.
+                </p>
+                <p>
+                    If you have a strong moral compass, life is hard both ways, whether you want to live a self-focused existence, or if you want to live a life of service to humanity. Your connection to God makes it easier to live both ways, one is human and the other is
+                    Divine. The human life is still good, but a Divine life is a different league. See for yourself first. <em>The choice is then, yours and only yours. </em>
+                </p>
+                <p>
+                    Once you have been given that choice s <em>erendipitously, and synchronically</em>, God will not intervene until you have <em>truly</em> taken a decision.
+                </p>
+                <p>
+                    <em>“For many are called, but few are chosen.” </em>
+                </p>
+                <p>
+                    <em>(Matthew 22:14)</em>
+                </p>
+                <p>
+                    You can then be assured that you are at the end of your spiritual journey – that you have truly earned this choice. Congratulations!
+                </p>
+                <p>
+                    Not many could say that.
+                </p>
+                <p>
+                    Out of those that could, only a handful ever chose the latter.
+                </p>
+                <p>
+                    Those who did, were <em>always</em> successful.
+                </p>
+                <p>
+                    This is God we’re talking about. Trust that shit.
+                </p>
+                <p>
+                    Good luck, Anhad.
+                </p>
+
+
+
+
+            </table>
+        </div>
+
+        <script>
+            let anchorlinks = document.querySelectorAll('a[href^="#"]')
+
+            for (let item of anchorlinks) { // relitere 
+                item.addEventListener('click', (e) => {
+                    let hashval = item.getAttribute('href')
+                    let target = document.querySelector(hashval)
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    })
+                    document.getElementById("mySidenav").style.width = "0";
+                    history.pushState(null, null, hashval)
+                    e.preventDefault()
+                })
+            }
+        </script>
+
+
+
+
+</body>
+
+
+
+</html>
