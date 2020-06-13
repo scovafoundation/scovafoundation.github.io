@@ -19,14 +19,21 @@
         // });
         $(document).ready(function() {
             var i = 1
-            $('p[class="verse"]').each(function() {
+            // $('p[class="verse"]').each(function() {
 
-                $(this).replaceWith("<tr><td colspan=\"2\"  style=\"font-weight: bolder; padding: 15pt 15pt 15pt 57pt;\" ><p>".concat(i.toString(),
-                    "</p></td><td colspan=\"27\" style=\"padding: 15pt 57pt 15pt 15pt;\"> <p>",
-                    $(this).html(), "</p> </td></tr>"))
+            //     $(this).replaceWith("<tr><td colspan=\"2\"  style=\"font-weight: bolder; padding: 15pt 15pt 15pt 57pt;\" ><p>".concat(i.toString(),
+            //         "</p></td><td colspan=\"27\" style=\"padding: 15pt 57pt 15pt 15pt;\"> ",
+            //         $(this).html(), "</td></tr>"))
+            //     i = i + 1;
+            // });
+
+            $('p.verse').each(function() {
+                $(this)
+                .wrapInner("<td colspan=\"27\" style=\"padding: 15pt 57pt 15pt 15pt;\"></td>")
+                .prepend("<td colspan=\"2\"  style=\"font-weight: bolder; padding: 15pt 15pt 15pt 57pt;\" >".concat(i.toString(),"</td>"))
+                .wrap("<tr></tr>");
                 i = i + 1;
-            });
-
+                });
         });
     </script>
 
@@ -251,7 +258,7 @@
         <table style="width: 100%;table-layout : fixed;">
             <tr>
                 <td id="header-left">
-                    <a href="# " onclick="openNav()"><img src="images/book.png"></a>
+                    <a href="#" onclick="openNav()"><img src="images/book.png"></a>
                 </td>
                 <!-- <div class="header-left ">
             <a href=# ">Chapters</a>
@@ -279,12 +286,12 @@
 
         </p>
 
-        <p><img src="images/monkey.png " style="width: 100%; "></p>
+        <p><img src="images/monkey.png" style="width: 100%; "></p>
         <p class="title-quote">
             <strong>
                 <p>
                     <em>
-                        “There is nothing better for a man, than that he should eat and drink,
+                        “There is nothing better for a man, than that he should eat and drink,</br>
                         and that he should make his soul enjoy good in his labour.
                     </em>
                 </p>
@@ -308,10 +315,8 @@
                 <p class="verse">
                     Even after you will have practiced all that I <em>will have</em> preached, you will realise that God is <em>only</em> available to you for a while, that is, when you are your <em>true self</em>. You can be true to yourself in certain
                     moments, and God <em>may</em> find a way to help you experience His presence. If you are observant, which, I hope you are, you will definitely <em>sense</em> Him. Whether through your five basic senses, or as an internal force – that
-                    really just depends on you. Nobody, not even I, can dictate that.
-                </p>
-                <p class="verse">
-                    No other entity can be the judge of that, and neither should you let them. His presence will linger, but it will not last forever. You can be “touched by infinity,” and yet live and breathe in the same human flesh. Don’t try disappointing your <em>self</em>                    turning water to wine just yet.
+                    really just depends on you. Nobody, not even I, can dictate that. No other entity can be the judge of that, and neither should you let them. His presence will linger, but it will not last forever. You can be “touched by infinity,”
+                    and yet live and breathe in the same human flesh. Don’t try disappointing your <em>self</em> turning water to wine just yet.
                 </p>
                 <p class="verse">
                     Don’t lose faith in your self, if your skin has not turned blue, or if you have not been able to part oceans. Whether or not He has told you about your cosmic lineage, it really doesn’t matter – you don’t have the memories of those lifetimes, and you
@@ -330,7 +335,7 @@
                 </p>
                 <p class="verse">
                     You could have been a ruler in your past life, but be born a pauper in the next, or a literal pig – you just can’t predict that. You can only assume. Similarly, you can make assumptions about someone’s current beginning to extrapolate their deeds in a
-                    past life. They can be advantageous, or disadvantageous, as are <em>micro-deaths</em> within a single bodily life that occur at the time of sleep, or metaphorical endings that define you internal narrative – you
+                    past life. They can be advantageous, or disadvantageous, as are <em>micro-deaths</em> within a single bodily life that occur at the time of sleep, or metaphorical endings that define your internal narrative – you
                     really just have to pay attention to your own life, and how it relates to, and is affected by, those around you. What they really are, are cues, for you to deliberate over as to <em>what to do in the next moment</em> as you proceed
                     further.
                 </p>
@@ -341,38 +346,30 @@
                     planet has become.
                 </p>
                 <p class="verse">
-                    For the truly <em>sentient</em> <em>organic knotted string complexes,</em> repeatedly unanswered prayers, mechanical rituals, and all the concocted formalities just do not make sense anymore. The “so-called” holy objects just seem
-                    like outdated material gizmos, meanwhile the pressure of a productive life has built up, in most occasions – close companions, acquaintances, and worthy strangers haven’t really been enough, and the socio-politico-cultural disaster
-                    of a status quo has truly failed them, and all that they thought they found innately meaningful, just hasn’t cut it for them. Why the suffering, if this world could be Heaven? Surely this thought has crossed your mind.
+                    For most of the truly <em>sentient</em> <em>organic knotted string complexes,</em> repeatedly unanswered prayers, mechanical rituals, and all the concocted formalities just do not make sense anymore. The “so-called” holy objects just seem like outdated material gizmos, meanwhile the pressure of a productive life has built up, in most occasions – close companions, acquaintances, and worthy strangers haven’t really been enough, and the socio-politico-cultural disaster of a status quo disappoints them on a regular basis, and all that they thought they found innately meaningful, just hasn’t cut it for them. Why is there still suffering, if this world could be Heaven? Surely this thought has crossed
+                    your mind.
                 </p>
                 <p class="verse">
-                    To get to the point where I <em>will have</em> told you that you can get, you are <strong>bound</strong> to have been wronged by the world in some shape, way or form. To counter the repercussions, you are <strong>bound</strong> to
-                    have taken some shortcuts, to have found your own release activities, and designed your own rituals, and have made personal connections that I never could have <em>explicitly</em> told you about. It is what, after all is said and done,
-                    I will have been asking you to do. This <em>framework</em>, that I will have described by the end of the Alethia, is tough, but fair. It asks a lot from the person to truly be able to comprehend it, and even more to apply coherently
+                    To get to the point where I <em>will have</em> told you that you can get, you are <strong>bound</strong> to have been wronged by the world in some shape, way or form. To counter the repercussions, you are <strong>bound</strong> to have taken some shortcuts, to have found your own release activities, and designed your own rituals, and have made personal connections that I never could have <em>explicitly</em> told you about. It is what, after all is said and done, I will have been asking you to do. This <em>framework</em>, that I will have described by the end of the Alethia, is tough, but fair. It asks a lot from the person to truly be able to comprehend it, and even more to apply coherently
                     in daily life – but it is doable. I will be proof.
                 </p>
                 <p class="verse">
                     So, for nobody else’s sake, but <em>your own</em>, look back, <em>reflect</em>, and ask yourself – what has been the one <strong>true constant</strong> in your life? Was it your faith? Was it your will power? Was it a person? An entity?
-                    A place? An object, or an activity? Ask properly, and He will tell you.
-                </p>
-                <p class="verse">
-                    When all your rational faculties weren’t functioning properly, to their fullest extent – when <em>you</em> weren’t even your fullest self – what was the one thing that gave you solace in the fact that when <em>everything else failed</em>                    – you would still have this one thing? This one thing <em>nudged you</em> towards hope, gave you comfort, peace, happiness, eradicated sadness, pushed your body and mind when they were close to hitting rock bottom and giving up – whether
-                    as its cause, or as the catalyst that pulled you upwards, or both. God knew that this was the one thing – and so He chose this one thing to <strong>guide your hand</strong>, and <em>show you your world via your connection to this one thing</em>.
+                    A place? An object, or an activity? Ask properly, and He will tell you. When all your rational faculties weren’t functioning properly, to their fullest extent – when <em>you</em> weren’t even your fullest self – what was the one thing
+                    that gave you solace in the fact that when <em>everything else failed</em> – you would still have this one thing? This one thing <em>nudged you</em> towards hope, gave you comfort, peace, happiness, eradicated sadness, pushed your
+                    body and mind when they were close to hitting rock bottom and giving up – whether as its cause, or as the catalyst that pulled you upwards, or both. God knew that this was the one thing – and so He chose this one thing to <strong>guide your hand</strong>,
+                    and <em>show you your world via your connection to this one thing</em>.
                 </p>
                 <p class="verse">
 
-                    <p class="bible"><em>
+                    <span class="bible"><em>
                         “Then I commended mirth, because a man hath no better thing under the sun, than to eat, and to drink, and to be merry: for that shall abide with him of his labour the days of his life, which God giveth him under the sun.” 
                     </br>
-                    (Ecclesiastes 8:15)</em></p>
+                    (Ecclesiastes 8:15)</em></span>
 
                 </p>
                 <p class="verse">
-                    What if I told you that one day, all that you are, and will be and all that you will have built and nurtured in between – would come undone if you were asked to give up this one thing and you didn’t follow through?
-                </p>
-                <p class="verse">
-                    <span style="text-align: center;">
-                    You keep it, you stay human; you <em>remove it from your life</em>, you become <em>Divine! </em>
+                    What if I told you that one day, all that you are, and will be and all that you will have built and nurtured in between – would come undone if you were asked to give up this one thing and you didn’t follow through? You keep it, you stay human; you <em>remove it from your life</em>, you become <em>Divine! </em>
                 </span>
                 </p>
                 <p class="verse">
