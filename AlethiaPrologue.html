@@ -29,8 +29,12 @@
 
             $('p.verse').each(function() {
                 $(this)
-                .wrapInner("<td colspan=\"27\" style=\"padding: 15pt 57pt 15pt 15pt;\"></td>")
+                .wrapInner("<td colspan=\"27\" style=\"padding: 15pt 57pt 15pt 15pt; \"></td>")
                 .prepend("<td colspan=\"2\"  style=\"font-weight: bolder; padding: 15pt 15pt 15pt 57pt;\" >".concat(i.toString(),"</td>"))
+                // .parent()
+                // .remove('p.verse')
+                // .unwrap()
+
                 .wrap("<tr></tr>");
                 i = i + 1;
                 });
@@ -53,6 +57,10 @@
 
         }
         
+        .verse {
+            width: 100%;
+        }
+
         .quran {
             text-align: center;
         }
@@ -310,7 +318,7 @@
         <div style="text-align:justify;text-justify: inter-word;line-height: 200%; ">
             <!-- <p style=" text-align: center;font-size: 30pt;" id="alethia-preface"><u>Preface To Alethia</u></p> -->
 
-            <table style="padding: 42pt;">
+            <table style="padding: 42pt; table-layout: fixed;">
 
                 <p class="verse">
                     Even after you will have practiced all that I <em>will have</em> preached, you will realise that God is <em>only</em> available to you for a while, that is, when you are your <em>true self</em>. You can be true to yourself in certain
@@ -380,8 +388,7 @@
                     to make you sufficiently prepared – and He enlightened you. This is not something that is sought for your own little self, <em>it is given for your world</em>, and as such, you are then <strong>bound</strong> to the responsibilities
                     He thereon assigns you. Quite a twist from the detachment that Gautam supposedly taught about, haan?
                 </p>
-                <p class="verse">
-                    <p class="bible">
+                <p class="verse bible">
                         <em>
                         “No man can serve two masters: for either he will hate the one, and
                         love the other; or else he will hold to the one, and despise the other.
@@ -390,17 +397,14 @@
                         <em>Ye cannot serve God and mammon.” </em>
                         </br>
                         <em>(Matthew 6:24)</em>
-                    </p>
                 </p>
                 <p class="verse">
                     If you so choose to stay human – you will <em>roam about in a loop</em>. Your loop might <em>up a level</em>, and things might <em>appear</em> to get better – but you will, still, roam about in a loop. You will evolve, grow more complex,
                     get more <em>entangled</em> – yet, stay in a loop. The guilt, the shame, and the blame that thus arise, will just get to be <em>too much</em> for any <em>single</em>, regular human being to carry along. Unburden, or adapt.
                 </p>
-                <p class="verse">
-                    <p class="quran">
+                <p class="verse quran">
                         إِلَّا الَّذِينَ تَابُوا وَأَصْلَحُوا وَبَيَّنُوا فَأُولَٰئِكَ أَتُوبُ عَلَيْهِمْ ۚ وَأَنَا التَّوَّابُ الرَّحِيمُ
                         </br><em>(Quran 2:160)</em>
-                    </p>
                 </p>
 
                 <p class="verse">
@@ -422,15 +426,13 @@
                 <p class="verse">
                     <em>Surrender to Rabb, and He will deliver.</em>
                 </p>
-                <p class="verse">
-                    <p class="bible">
+                <p class="verse bible">
                         <em>
                         “For what is a man profited, if he shall gain the whole world, and lose
                         his own soul? or what shall a man give in exchange for his soul?”
                     
                 </br>
                     (Matthew 16:26)</em>
-                    </p>
                 </p>
                 <p class="verse">
                     Life really does get better, if you give it up. You don’t, you still get to live a full life, a very rich (not always monetary) and textured life with all its <em>gory and glorious </em>details – but just not Divine. Untangle, and
@@ -439,8 +441,7 @@
                 <p class="verse">
                     Then, the question becomes – why did I choose this?
                 </p>
-                <p class="verse">
-                    <p class="quote">
+                <p class="verse quote">
                         <em>“I have never thought of writing for reputation and honour. </em>
                         </br>
                         <em>What I have in my heart must come out; </em>
@@ -448,7 +449,6 @@
                         <em>that is the reason why I compose.”</em>
                         </br>
                         <em>(LV Beethoven)</em>
-                    </p>
                 </p>
                 <p>
                     I have really tried for so long to <em>live for myself</em>, seize the day and do what is expected of me by my human companions. I have been constantly productive, dissolved all notion of the <em>self and the other</em>, followed my
