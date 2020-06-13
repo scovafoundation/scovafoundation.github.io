@@ -29,25 +29,22 @@
         // });
         $(document).ready(function() {
             var i = 1
-            // $('p[class="verse"]').each(function() {
-
-            //     $(this).replaceWith("<tr><td colspan=\"2\"  style=\"font-weight: bolder; padding: 15pt 15pt 15pt 57pt;\" ><p>".concat(i.toString(),
-            //         "</p></td><td colspan=\"27\" style=\"padding: 15pt 57pt 15pt 15pt;\"> ",
-            //         $(this).html(), "</td></tr>"))
-            //     i = i + 1;
-            // });
-
             $('p.verse').each(function() {
-                $(this)
-                .wrapInner("<td colspan=\"27\" style=\"padding: 15pt 57pt 15pt 15pt; \"></td>")
-                .prepend("<td colspan=\"2\"  style=\"font-weight: bolder; padding: 15pt 15pt 15pt 57pt;\" >".concat(i.toString(),"</td>"))
-                // .parent()
-                // .remove('p.verse')
-                // .unwrap()
 
-                .wrap("<tr></tr>");
+                $(this)
+                .replaceWith("<tr><td colspan=\"2\"  style=\"font-weight: bolder; padding: 15pt 15pt 15pt 57pt;vertical-align: middle;\" ><p>".concat(i.toString(),
+                    "</p></td><td colspan=\"27\" style=\"padding: 15pt 57pt 15pt 15pt;\" class=\"",this.className,"\"> ", this.innerHTML, "</td></tr>"))
                 i = i + 1;
-                });
+            });
+
+            // $('p.verse').each(function() {
+            //     $(this)
+            //     .wrapInner("<td colspan=\"27\" style=\"padding: 15pt 57pt 15pt 15pt; \"></td>")
+            //     .prepend("<td colspan=\"2\"  style=\"font-weight: bolder; padding: 15pt 15pt 15pt 57pt;\" >".concat(i.toString(),"</td>"))
+            //     .unwrap('p')
+            //     .wrap("<tr></tr>");
+            //     i = i + 1;
+            //     });
         });
     </script>
 
