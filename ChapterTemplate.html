@@ -53,182 +53,192 @@
     </script>
 
 
-    <style>
-        /* Style the header with a grey background and some padding */
-        
-        body {
-            background-image: url("images/last_night.png");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-            font-size: 20pt;
-            font-family: 'EB Garamond', serif;
-            background-color: white";
-        }
-        
-        .title-image img {
-            width: 95%;
-        }
+<style>
+    /* Style the header with a grey background and some padding */
+    
+    body {
+        background-image: url("images/background.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        font-size: 20pt;
+        font-family: 'EB Garamond', serif;
+        background-color: white";
+    }
+    
+    .equation {
+        text-align: center;
+        align-items: center;
+    }
 
-        .verse {
-            width: 100%;
-        }
+    .image img {
+        width:100%;
+    }
+    
+    .title-image img {
+        width: 95%;
+    }
 
-        .quran {
-            text-align: center;
-        }
-        
-        .bible {
-            text-align: center;
-        }
-        
-        .quote {
-            text-align: center;
-        }
-        
-        .quran em {
-            font-size: 20pt;
-            text-align: center;
-        }
-        
-        #header {
-            background-color: rgba(0, 0, 0, 0.9);
-            position: fixed;
-            /* Make it stick/fixed */
-            top: 0;
-            /* Stay on top */
-            width: 100%;
-            /* Full width */
-            transition: top 0.4s;
-            left: 0;
-            text-align: center;
-            height: 125px;
-        }
-        /* Style the header links */
-        
-        #header a {
-            color: black;
-            text-align: center;
-            text-decoration: none;
-            font-size: 20px;
-            /* line-height: 25px; */
-            border-radius: 4px;
-            padding: 12px;
-        }
-        /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-        
-        #header-center {
-            font-weight: bolder;
-            padding: 12px;
-            /* text-align: center; */
-        }
-        
-        #header-center img {
-            height: 100px;
-            /* padding: 12px; */
-        }
-        
-        #header-left {
-            text-align: left;
-            padding: 12px;
-        }
-        
-        #header-left img {
-            height: 80px;
-            /* padding: 12px; */
-        }
-        
-        #header-right {
-            text-align: right;
-            padding: 12px;
-        }
-        
-        #header-right img {
-            height: 42px;
-            /* padding: 12px; */
-        }
-        /* Change the background color on mouse-over */
-        
-        #header a:hover {
-            /* background-color: darkblue; */
-            color: whitesmoke;
-            padding: 12px;
-        }
-        /* Style the active/current link*/
-        
-        #header a.active {
-            background-color: forestgreen;
-            color: darkblue;
-        }
-        /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-        /* @media screen and (max-width: 500px) {
-        } */
-        
-        .title-quote {
-            font-size: 16pt;
-            color: red;
-        }
-        
-        th,
-        td {
-            padding: 15px;
-        }
-        
-        tr {
-            padding-bottom: 42pt;
-        }
-        
+    .verse {
+        width: 100%;
+    }
+
+    .quran {
+        text-align: center;
+        font-size: 30pt;
+    }
+    
+    .bible {
+        text-align: center;
+    }
+    
+    .quote {
+        text-align: center;
+    }
+    
+    .quran em {
+        font-size: 20pt;
+        text-align: center;
+    }
+    
+    #header {
+        background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        /* Make it stick/fixed */
+        top: 0;
+        /* Stay on top */
+        width: 100%;
+        /* Full width */
+        transition: top 0.4s;
+        left: 0;
+        text-align: center;
+        height: 125px;
+    }
+    /* Style the header links */
+    
+    #header a {
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+        /* line-height: 25px; */
+        border-radius: 4px;
+        padding: 12px;
+    }
+    /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+    
+    #header-center {
+        font-weight: bolder;
+        padding: 12px;
+        /* text-align: center; */
+    }
+    
+    #header-center img {
+        height: 100px;
+        /* padding: 12px; */
+    }
+    
+    #header-left {
+        text-align: left;
+        padding: 12px;
+    }
+    
+    #header-left img {
+        height: 80px;
+        /* padding: 12px; */
+    }
+    
+    #header-right {
+        text-align: right;
+        padding: 12px;
+    }
+    
+    #header-right img {
+        height: 42px;
+        /* padding: 12px; */
+    }
+    /* Change the background color on mouse-over */
+    
+    #header a:hover {
+        /* background-color: darkblue; */
+        color: whitesmoke;
+        padding: 12px;
+    }
+    /* Style the active/current link*/
+    
+    #header a.active {
+        background-color: forestgreen;
+        color: darkblue;
+    }
+    /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+    /* @media screen and (max-width: 500px) {
+    } */
+    
+    .title-quote {
+        font-size: 16pt;
+        color: red;
+    }
+    
+    th,
+    td {
+        padding: 15px;
+    }
+    
+    tr {
+        padding-bottom: 42pt;
+    }
+    
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position:fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    
+    .sidenav ol {
+        font-size: 20px;
+        color: #818181;
+    }
+    
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+    
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    
+    @media screen and (max-height: 450px) {
         .sidenav {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
+            padding-top: 15px;
         }
-        
-        .sidenav ol {
-            font-size: 20px;
-            color: #818181;
-        }
-        
         .sidenav a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 20px;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
+            font-size: 18px;
         }
-        
-        .sidenav a:hover {
-            color: #f1f1f1;
-        }
-        
-        .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
-        
-        @media screen and (max-height: 450px) {
-            .sidenav {
-                padding-top: 15px;
-            }
-            .sidenav a {
-                font-size: 18px;
-            }
-        }
-        
-        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
-    </style>
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+</style>
 </head>
 
 <body>
@@ -265,10 +275,10 @@
         <a href="AlethiaPreface.html">Alethia: Preface</a>
         <a href="AlethiaPrologue.html">Prologue: Alethia</a>
         <ol>
-            <li><a href="AlethiaChapter1.html">Framing The Problem</a></li>
-            <li><a href="AlethiaChapter2.html">The Concept of Flow</a></li>
+            <li><a href="AlethiaChapter1.html">Knots</a></li>
+            <li><a href="AlethiaChapter2.html">Flow</a></li>
             <li><a href="AlethiaChapter3.html">Anhad</a></li>
-            <li><a href="AlethiaChapter4.html">Satan: The Battle Within</a></li>
+            <li><a href="AlethiaChapter4.html">Satan</a></li>
             <li><a href="AlethiaChapter5.html">Anathema</a></li>
             <li><a href="AlethiaChapter6.html">Absolution</a></li>
         </ol>
@@ -310,11 +320,9 @@
         <div class="title-image"><img src="images/triquetra.png"></div>
         <p class="title-quote">
             <strong>
-                <p>
                     <em>
                         
                     </em>
-                </p>
             </strong>
         </p>
 
